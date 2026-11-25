@@ -21,111 +21,109 @@
 @prefix dcat:    <http://www.w3.org/ns/dcat#> .
 @prefix eusex:   <http://publications.europa.eu/resource/authority/human-sex/> .
 @prefix oly:     <https://w3id.org/olympic-lod/ontology#> .
-@prefix id:      <https://w3id.org/olympic-lod/tokyo2020/id/> .
 @prefix disc:    <https://w3id.org/olympic-lod/scheme/discipline/> .
 @prefix func:    <https://w3id.org/olympic-lod/scheme/function/> .
 @prefix medal:   <https://w3id.org/olympic-lod/scheme/medal-type/> .
 @prefix evcat:   <https://w3id.org/olympic-lod/scheme/event-category/> .
 @prefix scheme:  <https://w3id.org/olympic-lod/scheme/> .
-@prefix results: <https://olympics.com/tokyo-2020/olympic-games/en/results/> .
 
 # --- People ------------------------------------------------------------------
 
-id:person\/1440267 a foaf:Person ;
+<https://w3id.org/olympic-lod/tokyo2020/id/person/1440267> a foaf:Person ;
     foaf:name "KIM Je Deok" ;
     dbo:gender eusex:MALE ;
-    org:memberOf id:team\/kor-arc-men ;
-    foaf:isPrimaryTopicOf results:archery\/athlete-profile-n1440267-kim-je-deok.htm .
+    org:memberOf <https://w3id.org/olympic-lod/tokyo2020/id/team/kor-arc-men> ;
+    foaf:isPrimaryTopicOf <https://olympics.com/tokyo-2020/olympic-games/en/results/archery/athlete-profile-n1440267-kim-je-deok.htm> .
 
-id:person\/1381598 a foaf:Person ;
+<https://w3id.org/olympic-lod/tokyo2020/id/person/1381598> a foaf:Person ;
     foaf:name "ABDELSALAM Mohamed" ;
     dbo:gender eusex:MALE ;
-    org:memberOf id:team\/egy-fbl-men ;
-    foaf:isPrimaryTopicOf results:football\/athlete-profile-n1381598-abdelsalam-mohamed.htm .
+    org:memberOf <https://w3id.org/olympic-lod/tokyo2020/id/team/egy-fbl-men> ;
+    foaf:isPrimaryTopicOf <https://olympics.com/tokyo-2020/olympic-games/en/results/football/athlete-profile-n1381598-abdelsalam-mohamed.htm> .
 
-id:person\/1378828 a foaf:Person ;
+<https://w3id.org/olympic-lod/tokyo2020/id/person/1378828> a foaf:Person ;
     foaf:name "ABDELMAGID Wael" ;
     dbo:gender eusex:MALE ;
-    foaf:isPrimaryTopicOf results:football\/athlete-profile-n1378828-abdelmagid-wael.htm ;
-    oly:coachesAthlete id:person\/1381598 .          # derived: coach of the Team -> its members
+    foaf:isPrimaryTopicOf <https://olympics.com/tokyo-2020/olympic-games/en/results/football/athlete-profile-n1378828-abdelmagid-wael.htm> ;
+    oly:coachesAthlete <https://w3id.org/olympic-lod/tokyo2020/id/person/1381598> .          # derived: coach of the Team -> its members
 
-id:person\/1378816 a foaf:Person ;
+<https://w3id.org/olympic-lod/tokyo2020/id/person/1378816> a foaf:Person ;
     foaf:name "SHAWKY Gharib" ;
     dbo:gender eusex:MALE ;
-    foaf:isPrimaryTopicOf results:football\/athlete-profile-n1378816-shawky-gharib.htm ;
-    oly:coachesAthlete id:person\/1381598 .          # derived: coach of the men's Squad -> its members
+    foaf:isPrimaryTopicOf <https://olympics.com/tokyo-2020/olympic-games/en/results/football/athlete-profile-n1378816-shawky-gharib.htm> ;
+    oly:coachesAthlete <https://w3id.org/olympic-lod/tokyo2020/id/person/1381598> .          # derived: coach of the men's Squad -> its members
 
-id:person\/1510602 a foaf:Person ;
+<https://w3id.org/olympic-lod/tokyo2020/id/person/1510602> a foaf:Person ;
     foaf:name "ABAEVA Elena" ;
     dbo:gender eusex:FEMALE ;
     oly:officiatesAs func:judge ;
     oly:officiatesIn disc:wre ;
-    dbo:nationality id:country\/uzb ;
-    foaf:isPrimaryTopicOf results:wrestling\/athlete-profile-n1510602-abaeva-elena.htm .
+    dbo:nationality <https://w3id.org/olympic-lod/tokyo2020/id/country/uzb> ;
+    foaf:isPrimaryTopicOf <https://olympics.com/tokyo-2020/olympic-games/en/results/wrestling/athlete-profile-n1510602-abaeva-elena.htm> .
 
 # --- Coaching roles ----------------------------------------------------------
 
-id:membership\/1378828-egy-fbl a org:Membership ;
-    org:member id:person\/1378828 ;
-    org:organization id:team\/egy-fbl ;
+<https://w3id.org/olympic-lod/tokyo2020/id/membership/1378828-egy-fbl> a org:Membership ;
+    org:member <https://w3id.org/olympic-lod/tokyo2020/id/person/1378828> ;
+    org:organization <https://w3id.org/olympic-lod/tokyo2020/id/team/egy-fbl> ;
     org:role func:head-coach .
 
-id:membership\/1378816-egy-fbl-men a org:Membership ;
-    org:member id:person\/1378816 ;
-    org:organization id:team\/egy-fbl-men ;
+<https://w3id.org/olympic-lod/tokyo2020/id/membership/1378816-egy-fbl-men> a org:Membership ;
+    org:member <https://w3id.org/olympic-lod/tokyo2020/id/person/1378816> ;
+    org:organization <https://w3id.org/olympic-lod/tokyo2020/id/team/egy-fbl-men> ;
     org:role func:head-coach .
 
 # --- Teams and squads --------------------------------------------------------
 
-id:team\/kor-arc a dbo:SportsTeam ;
+<https://w3id.org/olympic-lod/tokyo2020/id/team/kor-arc> a dbo:SportsTeam ;
     foaf:name "Republic of Korea · Archery" ;
-    org:subOrganizationOf id:noc\/kor ;
+    org:subOrganizationOf <https://w3id.org/olympic-lod/tokyo2020/id/noc/kor> ;
     dbo:sport disc:arc .
 
-id:team\/kor-arc-men a dbo:SportsTeam ;
-    org:subOrganizationOf id:team\/kor-arc ;
+<https://w3id.org/olympic-lod/tokyo2020/id/team/kor-arc-men> a dbo:SportsTeam ;
+    org:subOrganizationOf <https://w3id.org/olympic-lod/tokyo2020/id/team/kor-arc> ;
     dbo:gender eusex:MALE .
 
-id:team\/egy-fbl a dbo:SportsTeam ;
+<https://w3id.org/olympic-lod/tokyo2020/id/team/egy-fbl> a dbo:SportsTeam ;
     foaf:name "Egypt · Football" ;
-    org:subOrganizationOf id:noc\/egy ;
+    org:subOrganizationOf <https://w3id.org/olympic-lod/tokyo2020/id/noc/egy> ;
     dbo:sport disc:fbl .
 
-id:team\/egy-fbl-men a dbo:SportsTeam ;
-    org:subOrganizationOf id:team\/egy-fbl ;
+<https://w3id.org/olympic-lod/tokyo2020/id/team/egy-fbl-men> a dbo:SportsTeam ;
+    org:subOrganizationOf <https://w3id.org/olympic-lod/tokyo2020/id/team/egy-fbl> ;
     dbo:gender eusex:MALE .
 
 # --- NOCs and countries ------------------------------------------------------
 
-id:noc\/kor a org:FormalOrganization ;
+<https://w3id.org/olympic-lod/tokyo2020/id/noc/kor> a org:FormalOrganization ;
     foaf:name "Republic of Korea" ;
     org:identifier "KOR" .
 
-id:noc\/egy a org:FormalOrganization ;
+<https://w3id.org/olympic-lod/tokyo2020/id/noc/egy> a org:FormalOrganization ;
     foaf:name "Egypt" ;
     org:identifier "EGY" .
 
-id:country\/uzb a dbo:Country ;
+<https://w3id.org/olympic-lod/tokyo2020/id/country/uzb> a dbo:Country ;
     foaf:name "Uzbekistan" ;
     dcterms:identifier "UZB" ;
     owl:sameAs <http://www.wikidata.org/entity/Q265> .
 
 # --- Events, the Games, medals -----------------------------------------------
 
-id:games\/tokyo2020 a dbo:Olympics ;
+<https://w3id.org/olympic-lod/tokyo2020/id/games/tokyo2020> a dbo:Olympics ;
     foaf:name "Tokyo 2020 Olympic Games" ;
     owl:sameAs <http://www.wikidata.org/entity/Q181278> .
 
-id:event\/arc-mixed-team a dbo:SportsEvent ;
+<https://w3id.org/olympic-lod/tokyo2020/id/event/arc-mixed-team> a dbo:SportsEvent ;
     foaf:name "Mixed Team" ;
     dbo:sport disc:arc ;
     oly:eventCategory evcat:mixed ;
-    dcterms:isPartOf id:games\/tokyo2020 .
+    dcterms:isPartOf <https://w3id.org/olympic-lod/tokyo2020/id/games/tokyo2020> .
 
-id:medal\/1440267-arc-mixed-team a oly:MedalAward ;
-    oly:awardedTo id:person\/1440267 ;
-    oly:inEvent id:event\/arc-mixed-team ;
-    oly:wonBy id:team\/kor-arc ;
+<https://w3id.org/olympic-lod/tokyo2020/id/medal/1440267-arc-mixed-team> a oly:MedalAward ;
+    oly:awardedTo <https://w3id.org/olympic-lod/tokyo2020/id/person/1440267> ;
+    oly:inEvent <https://w3id.org/olympic-lod/tokyo2020/id/event/arc-mixed-team> ;
+    oly:wonBy <https://w3id.org/olympic-lod/tokyo2020/id/team/kor-arc> ;
     oly:medalType medal:gold ;
     dcterms:date "2021-07-24"^^xsd:date .
 

@@ -118,3 +118,10 @@ def test_no_schema_org():
     hits = [f"{p}:{i}" for p in files for i, line in enumerate(open(p, encoding="utf-8"), 1)
             if re.search(r"schema\.org|\bschema:", line)]
     assert hits == []
+
+
+
+def test_turtle_without_escaped_slashes():
+    r"""Names like id:person\/1 are valid Turtle 1.1, but some parsers (the SHACL Playground's) reject them."""
+    files = [SHAPES, VALID, os.path.join(ROOT, "ontology", "oly.ttl"), os.path.join(ROOT, "data", "rdf", "tokyo2020.ttl")]
+    assert [p for p in files if "\\/" in open(p, encoding="utf-8").read()] == []
