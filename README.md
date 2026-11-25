@@ -179,6 +179,7 @@ shacl/           the profile as SHACL + examples/ (valid sample, broken/ and all
 ontology/        oly.ttl, the 9 minted terms
 pipeline/        the conversion pipeline and its decision tables
 tests/           pytest suite
+index.html       the GitHub Pages landing page
 w3id/            the w3id.org registration: redirects to GitHub Pages (see Releasing, step 6)
 ```
 

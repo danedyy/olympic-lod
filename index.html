@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Olympic LOD — Tokyo 2020 Olympic Games as 5-star Linked Open Data</title>
+  <meta name="description" content="The Tokyo 2020 Olympic Games as 5-star Linked Open Data: RDF dataset, SHACL application profile, ontology and conversion pipeline.">
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.55; color: #1f2328;
+           max-width: 46rem; margin: 3rem auto; padding: 0 1.25rem; }
+    h1 { font-size: 1.6rem; margin-bottom: .25rem; }
+    h2 { font-size: 1.1rem; margin-top: 2rem; }
+    .meta { color: #59636e; margin-top: 0; }
+    a { color: #0969da; }
+    code { background: #f6f8fa; padding: .1rem .3rem; border-radius: 4px; font-size: .9em; }
+    ul { padding-left: 1.2rem; }
+    li { margin: .35rem 0; }
+  </style>
+</head>
+<body>
+  <h1>Olympic LOD — Tokyo 2020 Olympic Games as 5-star Linked Open Data</h1>
+  <p class="meta">Daniel Samuel Edim · Ahmad Imran — Faculty of Engineering, University of Porto · release 1.0.0</p>
+
+  <p>The Kaggle Tokyo 2020 CSV dump turned into Linked Open Data: athletes, coaches, technical officials,
+     teams, events and medals, with stable IRIs and links to Wikidata. The data is validated against
+     its own application profile in SHACL.</p>
+
+  <p><strong>Cite:</strong> <a href="https://doi.org/10.5281/zenodo.24543242">doi:10.5281/zenodo.24543242</a></p>
+
+  <h2>Files</h2>
+  <ul>
+    <li><a href="data/rdf/tokyo2020.ttl">tokyo2020.ttl</a> — the dataset (Turtle, 109,679 triples, 7.8 MB)</li>
+    <li><a href="ontology/oly.ttl">oly.ttl</a> — the ontology of the 9 minted terms, <code>https://w3id.org/olympic-lod/ontology#</code></li>
+    <li><a href="shacl/olympic-lod-shapes.ttl">olympic-lod-shapes.ttl</a> — the application profile as SHACL shapes</li>
+    <li><a href="data/rdf/validation-report.csv">validation-report.csv</a> — SHACL results (0 violations)</li>
+    <li><a href="data/rdf/issues-log.csv">issues-log.csv</a> — source problems kept and flagged for review</li>
+  </ul>
+
+  <h2>Project</h2>
+  <ul>
+    <li><a href="https://github.com/danedyy/olympic-lod">Source code and documentation on GitHub</a></li>
+    <li><a href="https://zenodo.org/records/24543242">Archived release on Zenodo</a></li>
+  </ul>
+
+  <p class="meta">Data and profile: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+     (inherited from the source) · Code: MIT</p>
+</body>
+</html>
