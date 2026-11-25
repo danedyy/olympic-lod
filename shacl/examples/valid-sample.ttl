@@ -1,0 +1,159 @@
+# A small sample of the Olympic LOD data, written by hand from
+# real source rows. It must conform to ../olympic-lod-shapes.ttl (warnings for missing
+# recommended Wikidata links are expected: those links come from the pipeline).
+#
+#   athletes.csv  KIM Je Deok (KOR, Archery), ABDELSALAM Mohamed (EGY, Football)
+#   coaches.csv   ABDELMAGID Wael (EGY Football, Head Coach, event empty -> whole Team)
+#                 SHAWKY Gharib  (EGY Football, Head Coach, event Men  -> men's Squad)
+#   technical_officials.csv  ABAEVA Elena (Uzbekistan, Wrestling, Judge)
+#   medals.csv    Gold, 2021-07-24, KIM Je Deok, X, KOR, ARC, Mixed Team
+#
+# Wikidata items checked on query.wikidata.org: Q181278 (2020 Summer Olympics), Q265 (Uzbekistan).
+# The olympics.com base of the profile pages is the one the pipeline uses (the source only has relative links).
+
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix org:     <http://www.w3.org/ns/org#> .
+@prefix dbo:     <http://dbpedia.org/ontology/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix eusex:   <http://publications.europa.eu/resource/authority/human-sex/> .
+@prefix oly:     <https://w3id.org/olympic-lod/ontology#> .
+@prefix id:      <https://w3id.org/olympic-lod/tokyo2020/id/> .
+@prefix disc:    <https://w3id.org/olympic-lod/scheme/discipline/> .
+@prefix func:    <https://w3id.org/olympic-lod/scheme/function/> .
+@prefix medal:   <https://w3id.org/olympic-lod/scheme/medal-type/> .
+@prefix evcat:   <https://w3id.org/olympic-lod/scheme/event-category/> .
+@prefix scheme:  <https://w3id.org/olympic-lod/scheme/> .
+@prefix results: <https://olympics.com/tokyo-2020/olympic-games/en/results/> .
+
+# --- People ------------------------------------------------------------------
+
+id:person\/1440267 a foaf:Person ;
+    foaf:name "KIM Je Deok" ;
+    dbo:gender eusex:MALE ;
+    org:memberOf id:team\/kor-arc-men ;
+    foaf:isPrimaryTopicOf results:archery\/athlete-profile-n1440267-kim-je-deok.htm .
+
+id:person\/1381598 a foaf:Person ;
+    foaf:name "ABDELSALAM Mohamed" ;
+    dbo:gender eusex:MALE ;
+    org:memberOf id:team\/egy-fbl-men ;
+    foaf:isPrimaryTopicOf results:football\/athlete-profile-n1381598-abdelsalam-mohamed.htm .
+
+id:person\/1378828 a foaf:Person ;
+    foaf:name "ABDELMAGID Wael" ;
+    dbo:gender eusex:MALE ;
+    foaf:isPrimaryTopicOf results:football\/athlete-profile-n1378828-abdelmagid-wael.htm ;
+    oly:coachesAthlete id:person\/1381598 .          # derived: coach of the Team -> its members
+
+id:person\/1378816 a foaf:Person ;
+    foaf:name "SHAWKY Gharib" ;
+    dbo:gender eusex:MALE ;
+    foaf:isPrimaryTopicOf results:football\/athlete-profile-n1378816-shawky-gharib.htm ;
+    oly:coachesAthlete id:person\/1381598 .          # derived: coach of the men's Squad -> its members
+
+id:person\/1510602 a foaf:Person ;
+    foaf:name "ABAEVA Elena" ;
+    dbo:gender eusex:FEMALE ;
+    oly:officiatesAs func:judge ;
+    oly:officiatesIn disc:wre ;
+    dbo:nationality id:country\/uzb ;
+    foaf:isPrimaryTopicOf results:wrestling\/athlete-profile-n1510602-abaeva-elena.htm .
+
+# --- Coaching roles ----------------------------------------------------------
+
+id:membership\/1378828-egy-fbl a org:Membership ;
+    org:member id:person\/1378828 ;
+    org:organization id:team\/egy-fbl ;
+    org:role func:head-coach .
+
+id:membership\/1378816-egy-fbl-men a org:Membership ;
+    org:member id:person\/1378816 ;
+    org:organization id:team\/egy-fbl-men ;
+    org:role func:head-coach .
+
+# --- Teams and squads --------------------------------------------------------
+
+id:team\/kor-arc a dbo:SportsTeam ;
+    foaf:name "Republic of Korea · Archery" ;
+    org:subOrganizationOf id:noc\/kor ;
+    dbo:sport disc:arc .
+
+id:team\/kor-arc-men a dbo:SportsTeam ;
+    org:subOrganizationOf id:team\/kor-arc ;
+    dbo:gender eusex:MALE .
+
+id:team\/egy-fbl a dbo:SportsTeam ;
+    foaf:name "Egypt · Football" ;
+    org:subOrganizationOf id:noc\/egy ;
+    dbo:sport disc:fbl .
+
+id:team\/egy-fbl-men a dbo:SportsTeam ;
+    org:subOrganizationOf id:team\/egy-fbl ;
+    dbo:gender eusex:MALE .
+
+# --- NOCs and countries ------------------------------------------------------
+
+id:noc\/kor a org:FormalOrganization ;
+    foaf:name "Republic of Korea" ;
+    org:identifier "KOR" .
+
+id:noc\/egy a org:FormalOrganization ;
+    foaf:name "Egypt" ;
+    org:identifier "EGY" .
+
+id:country\/uzb a dbo:Country ;
+    foaf:name "Uzbekistan" ;
+    dcterms:identifier "UZB" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q265> .
+
+# --- Events, the Games, medals -----------------------------------------------
+
+id:games\/tokyo2020 a dbo:Olympics ;
+    foaf:name "Tokyo 2020 Olympic Games" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q181278> .
+
+id:event\/arc-mixed-team a dbo:SportsEvent ;
+    foaf:name "Mixed Team" ;
+    dbo:sport disc:arc ;
+    oly:eventCategory evcat:mixed ;
+    dcterms:isPartOf id:games\/tokyo2020 .
+
+id:medal\/1440267-arc-mixed-team a oly:MedalAward ;
+    oly:awardedTo id:person\/1440267 ;
+    oly:inEvent id:event\/arc-mixed-team ;
+    oly:wonBy id:team\/kor-arc ;
+    oly:medalType medal:gold ;
+    dcterms:date "2021-07-24"^^xsd:date .
+
+# --- Code lists (only the entries used above) --------------------------------
+
+scheme:discipline a skos:ConceptScheme ; skos:prefLabel "Discipline"@en .
+scheme:function a skos:ConceptScheme ; skos:prefLabel "Function"@en .
+scheme:medal-type a skos:ConceptScheme ; skos:prefLabel "Medal type"@en .
+scheme:event-category a skos:ConceptScheme ; skos:prefLabel "Event category"@en .
+
+disc:arc a skos:Concept ; skos:prefLabel "Archery"@en ; skos:notation "ARC" ; skos:inScheme scheme:discipline .
+disc:fbl a skos:Concept ; skos:prefLabel "Football"@en ; skos:notation "FBL" ; skos:inScheme scheme:discipline .
+disc:wre a skos:Concept ; skos:prefLabel "Wrestling"@en ; skos:notation "WRE" ; skos:inScheme scheme:discipline .
+
+func:head-coach a skos:Concept, org:Role ; skos:prefLabel "Head Coach"@en ; skos:inScheme scheme:function .
+func:judge a skos:Concept, org:Role ; skos:prefLabel "Judge"@en ; skos:inScheme scheme:function .
+
+medal:gold a skos:Concept ; skos:prefLabel "Gold"@en ; skos:inScheme scheme:medal-type .
+
+evcat:mixed a skos:Concept ; skos:prefLabel "mixed"@en ; skos:notation "X" ; skos:inScheme scheme:event-category .
+
+# --- The dataset -------------------------------------------------------------
+
+<https://w3id.org/olympic-lod/tokyo2020/dataset> a dcat:Dataset ;
+    dcterms:title "Tokyo 2020 Olympic Games as Linked Open Data"@en ;
+    dcterms:description "Athletes, coaches, technical officials, teams, events and medals of the Tokyo 2020 Olympic Games, converted from the Kaggle CSV dump to 5-star Linked Open Data."@en ;
+    dcterms:license <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+    dcterms:creator [ a foaf:Person ; foaf:name "Daniel Samuel Edim" ] ,
+                    [ a foaf:Person ; foaf:name "Ahmad Imran" ] ;
+    dcterms:source <https://www.kaggle.com/datasets/piterfm/tokyo-2020-olympics> ;
+    dcterms:issued "2026-11-19"^^xsd:date .

@@ -1,0 +1,479 @@
+# =============================================================================
+#  Olympic LOD — Linked Data Application Profile as SHACL shapes
+#  Tokyo 2020 Olympic Games → 5-star Linked Open Data
+#
+#  Authors: Daniel Samuel Edim (up202400301, up202400301@edu.fe.up.pt) · Ahmad Imran (up202403072, up202403072@edu.fe.up.pt)
+#  Version: 2.0 · 19 November 2026
+#
+#  This file is the constraints matrix (54 rows, ../ldap/constraints-matrix.csv)
+#  written as SHACL Core shapes. "Row n" in the comments points to that matrix.
+#
+#  Vocabularies: FOAF (people), ORG — the W3C
+#  Organization Ontology (NOCs, memberships, roles), the DBpedia ontology (teams,
+#  countries, events, the Games), SKOS (code lists), DCTERMS and DCAT (dataset),
+#  OWL (Wikidata links), and oly: for the 9 terms we mint. Sex values come from
+#  the EU Publications Office human-sex authority table.
+#
+#  Conventions:
+#   * Obligation M (mandatory)   -> sh:Violation (the default severity).
+#   * Obligation R (recommended) -> a separate sh:minCount 1 with sh:severity sh:Warning:
+#                                   reported, but the data still conforms. Such warnings are
+#                                   kept out of shapes reached through sh:node / sh:xone,
+#                                   where they would turn into violations.
+#   * Obligation O (optional)    -> only the range and the maximum are checked.
+#   * Roles are links, not classes: athletes, coaches and officials are
+#     found through the link that makes them one (sh:targetSubjectsOf / sh:targetObjectsOf).
+#   * Team and Squad are both dbo:SportsTeam; sh:xone requires each to be exactly one of the two.
+# =============================================================================
+
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix org:     <http://www.w3.org/ns/org#> .
+@prefix dbo:     <http://dbpedia.org/ontology/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix eusex:   <http://publications.europa.eu/resource/authority/human-sex/> .
+@prefix oly:     <https://w3id.org/olympic-lod/ontology#> .
+@prefix olysh:   <https://w3id.org/olympic-lod/shapes#> .
+
+olysh: a owl:Ontology ;
+    rdfs:label "Olympic LOD application profile (SHACL)"@en ;
+    rdfs:comment "SHACL shapes for the Olympic LOD data of the Tokyo 2020 Games: the constraints matrix of the application profile made machine-checkable."@en ;
+    dcterms:creator "Daniel Samuel Edim", "Ahmad Imran" ;
+    dcterms:license <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+    owl:versionInfo "2.0" .
+
+
+# -----------------------------------------------------------------------------
+#  Person (rows 1–9)
+# -----------------------------------------------------------------------------
+
+olysh:PersonShape a sh:NodeShape ;
+    sh:targetClass foaf:Person ;                                # row 1
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type foaf:isPrimaryTopicOf org:memberOf
+                           oly:officiatesAs oly:officiatesIn dbo:nationality ) ;
+    sh:property [                                               # row 2
+        sh:path foaf:name ; sh:name "name" ;
+        sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A person has exactly one name (a plain string)." ;
+    ] ;
+    sh:property [                                               # row 3
+        sh:path dbo:gender ; sh:name "sex" ;
+        sh:in ( eusex:FEMALE eusex:MALE ) ; sh:maxCount 1 ;
+        sh:message "Sex is at most one of the EU human-sex values FEMALE or MALE." ;
+    ] ;
+    sh:property [                                               # row 9
+        sh:path oly:coachesAthlete ; sh:name "coaches athlete" ;
+        sh:class foaf:Person ;
+        sh:message "oly:coachesAthlete must point to a foaf:Person." ;
+    ] .
+
+olysh:AthleteShape a sh:NodeShape ;
+    sh:targetSubjectsOf org:memberOf ;
+    sh:class foaf:Person ;
+    sh:pattern "^https://w3id\\.org/olympic-lod/tokyo2020/id/person/[0-9]+$" ;
+    sh:property olysh:ProfilePageProperty ;                     # row 4
+    sh:property olysh:SexRecommended ;                          # row 3 (R)
+    sh:property [                                               # row 5
+        sh:path org:memberOf ; sh:name "member of" ;
+        sh:class dbo:SportsTeam ; sh:minCount 1 ;
+        sh:message "An athlete is a member of at least one Squad or Team (dbo:SportsTeam)." ;
+    ] .
+
+olysh:CoachShape a sh:NodeShape ;
+    sh:targetObjectsOf org:member ;
+    sh:class foaf:Person ;
+    sh:pattern "^https://w3id\\.org/olympic-lod/tokyo2020/id/person/[0-9]+$" ;
+    sh:property olysh:ProfilePageProperty ;                     # row 4
+    sh:property olysh:SexRecommended .                          # row 3 (R)
+
+olysh:OfficialShape a sh:NodeShape ;
+    sh:targetSubjectsOf oly:officiatesIn ;
+    sh:class foaf:Person ;
+    sh:pattern "^https://w3id\\.org/olympic-lod/tokyo2020/id/person/[0-9]+$" ;
+    sh:property olysh:ProfilePageProperty ;                     # row 4
+    sh:property olysh:SexRecommended ;                          # row 3 (R)
+    sh:property [                                               # row 6
+        sh:path oly:officiatesAs ; sh:name "officiates as" ;
+        sh:node olysh:FunctionConcept ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "An official has exactly one function from the Function code list." ;
+    ] ;
+    sh:property [                                               # row 7
+        sh:path oly:officiatesIn ; sh:name "officiates in" ;
+        sh:node olysh:DisciplineConcept ; sh:minCount 1 ;
+        sh:message "An official officiates in at least one discipline from the Discipline code list." ;
+    ] ;
+    sh:property [                                               # row 8
+        sh:path dbo:nationality ; sh:name "nationality" ;
+        sh:class dbo:Country ; sh:minCount 1 ;
+        sh:message "An official has at least one nationality (dbo:Country)." ;
+    ] .
+
+olysh:ProfilePageProperty a sh:PropertyShape ;
+    sh:path foaf:isPrimaryTopicOf ; sh:name "profile page" ;
+    sh:nodeKind sh:IRI ; sh:minCount 1 ;
+    sh:message "A person from the source keeps at least one original profile page (an IRI)." .
+
+olysh:SexRecommended a sh:PropertyShape ;
+    sh:path dbo:gender ; sh:name "sex" ;
+    sh:minCount 1 ; sh:severity sh:Warning ;
+    sh:message "Recommended: the person's sex (left empty when the source does not give it; never guessed)." .
+
+
+# -----------------------------------------------------------------------------
+#  Team and Squad (rows 10–15) — both dbo:SportsTeam
+# -----------------------------------------------------------------------------
+
+olysh:SportsTeamShape a sh:NodeShape ;
+    sh:targetClass dbo:SportsTeam ;                             # row 10
+    sh:xone ( olysh:TeamShape olysh:SquadShape ) ;
+    sh:message "A dbo:SportsTeam is exactly one of: a Team (NOC + discipline) or a Squad (Team + men/women)." .
+
+# Row 11 (R). Kept outside TeamShape: TeamShape is also used through sh:node and
+# sh:xone, where a warning would turn into a violation. A Squad has a gender, so
+# "a gender or a name" asks for a name on Teams only.
+olysh:TeamNameRecommendedShape a sh:NodeShape ;
+    sh:targetClass dbo:SportsTeam ;
+    sh:severity sh:Warning ;
+    sh:or (
+        [ sh:path dbo:gender ; sh:minCount 1 ]
+        [ sh:path foaf:name ; sh:minCount 1 ]
+    ) ;
+    sh:message "Recommended: a display name for the team (NOC name · discipline)." .
+
+olysh:TeamShape a sh:NodeShape ;
+    sh:pattern "^https://w3id\\.org/olympic-lod/tokyo2020/id/team/[a-z]{3}-[a-z0-9]{3}$" ;
+    sh:property [                                               # row 11
+        sh:path foaf:name ; sh:name "name" ;
+        sh:datatype xsd:string ; sh:maxCount 1 ;
+    ] ;
+    sh:property [                                               # row 12
+        sh:path org:subOrganizationOf ; sh:name "part of NOC" ;
+        sh:class org:FormalOrganization ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A team belongs to exactly one NOC (org:FormalOrganization)." ;
+    ] ;
+    sh:property [                                               # row 13
+        sh:path dbo:sport ; sh:name "sport" ;
+        sh:node olysh:DisciplineConcept ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A team has exactly one discipline from the Discipline code list." ;
+    ] ;
+    sh:property [
+        sh:path dbo:gender ; sh:maxCount 0 ;
+        sh:message "A team has no gender; its men's and women's sides are Squads." ;
+    ] .
+
+olysh:SquadShape a sh:NodeShape ;
+    sh:pattern "^https://w3id\\.org/olympic-lod/tokyo2020/id/team/[a-z]{3}-[a-z0-9]{3}-(men|women)$" ;
+    sh:property [                                               # row 14
+        sh:path org:subOrganizationOf ; sh:name "part of Team" ;
+        sh:class dbo:SportsTeam ; sh:node olysh:TeamShape ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A squad belongs to exactly one Team." ;
+    ] ;
+    sh:property [                                               # row 15
+        sh:path dbo:gender ; sh:name "gender" ;
+        sh:in ( eusex:FEMALE eusex:MALE ) ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A squad is either the men's (MALE) or the women's (FEMALE) side." ;
+    ] .
+
+
+# -----------------------------------------------------------------------------
+#  Coaching role (rows 16–19) — an org:Membership
+# -----------------------------------------------------------------------------
+
+olysh:MembershipShape a sh:NodeShape ;
+    sh:targetClass org:Membership ;                             # row 16
+    sh:pattern "^https://w3id\\.org/olympic-lod/tokyo2020/id/membership/[0-9]+-[a-z]{3}-[a-z0-9]{3}(-(men|women))?$" ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [                                               # row 17
+        sh:path org:member ; sh:name "member" ;
+        sh:class foaf:Person ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A coaching role has exactly one coach (foaf:Person)." ;
+    ] ;
+    sh:property [                                               # row 18
+        sh:path org:organization ; sh:name "team" ;
+        sh:class dbo:SportsTeam ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A coaching role is in exactly one Team or Squad." ;
+    ] ;
+    sh:property [                                               # row 19
+        sh:path org:role ; sh:name "function" ;
+        sh:node olysh:FunctionConcept ;
+        sh:in ( <https://w3id.org/olympic-lod/scheme/function/coach>
+                <https://w3id.org/olympic-lod/scheme/function/head-coach> ) ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A coaching role has exactly one coach function: Coach or Head Coach." ;
+    ] .
+
+
+# -----------------------------------------------------------------------------
+#  NOC and Country (rows 20–27)
+# -----------------------------------------------------------------------------
+
+olysh:NocShape a sh:NodeShape ;
+    sh:targetClass org:FormalOrganization ;                     # row 20
+    sh:pattern "^https://w3id\\.org/olympic-lod/tokyo2020/id/noc/[a-z]{3}$" ;
+    sh:property [                                               # row 21
+        sh:path foaf:name ; sh:name "name" ;
+        sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A NOC has exactly one name." ;
+    ] ;
+    sh:property [                                               # row 22
+        sh:path org:identifier ; sh:name "IOC code" ;
+        sh:datatype xsd:string ; sh:pattern "^[A-Z]{3}$" ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A NOC has exactly one IOC code: three capital letters." ;
+    ] ;
+    sh:property olysh:WikidataSameAsProperty ;                  # row 23
+    sh:property olysh:WikidataSameAsRecommended .               # row 23 (R)
+
+olysh:CountryShape a sh:NodeShape ;
+    sh:targetClass dbo:Country ;                                # row 24
+    sh:pattern "^https://w3id\\.org/olympic-lod/tokyo2020/id/country/[a-z]{3}$" ;
+    sh:property [                                               # row 25
+        sh:path foaf:name ; sh:name "name" ;
+        sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A country has exactly one name (ISO 3166 English short name)." ;
+    ] ;
+    sh:property [                                               # row 26
+        sh:path dcterms:identifier ; sh:name "ISO code" ;
+        sh:datatype xsd:string ; sh:pattern "^[A-Z]{3}$" ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A country has exactly one ISO 3166-1 alpha-3 code: three capital letters." ;
+    ] ;
+    sh:property olysh:WikidataSameAsProperty ;                  # row 27
+    sh:property olysh:WikidataSameAsRecommended .               # row 27 (R)
+
+olysh:WikidataSameAsProperty a sh:PropertyShape ;
+    sh:path owl:sameAs ; sh:name "same as" ;
+    sh:nodeKind sh:IRI ; sh:maxCount 1 ;
+    sh:pattern "^http://www\\.wikidata\\.org/entity/Q[0-9]+$" ;
+    sh:message "owl:sameAs points to at most one Wikidata item (http://www.wikidata.org/entity/Q…)." .
+
+olysh:WikidataSameAsRecommended a sh:PropertyShape ;
+    sh:path owl:sameAs ; sh:name "same as" ;
+    sh:minCount 1 ; sh:severity sh:Warning ;
+    sh:message "Recommended: a link to the same thing in Wikidata (5th star)." .
+
+
+# -----------------------------------------------------------------------------
+#  Event and the Games (rows 28–35)
+# -----------------------------------------------------------------------------
+
+olysh:EventShape a sh:NodeShape ;
+    sh:targetClass dbo:SportsEvent ;                            # row 28
+    sh:pattern "^https://w3id\\.org/olympic-lod/tokyo2020/id/event/[a-z0-9]{3}-[a-z0-9-]+$" ;
+    sh:property [                                               # row 29
+        sh:path foaf:name ; sh:name "name" ;
+        sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "An event has exactly one name." ;
+    ] ;
+    sh:property [                                               # row 30
+        sh:path dbo:sport ; sh:name "discipline" ;
+        sh:node olysh:DisciplineConcept ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "An event has exactly one discipline from the Discipline code list." ;
+    ] ;
+    sh:property [                                               # row 31
+        sh:path oly:eventCategory ; sh:name "category" ;
+        sh:node olysh:EventCategoryConcept ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "An event has exactly one category (men, women, mixed, open) from the Event category code list." ;
+    ] ;
+    sh:property [                                               # row 32
+        sh:path dcterms:isPartOf ; sh:name "part of the Games" ;
+        sh:class dbo:Olympics ;
+        sh:hasValue <https://w3id.org/olympic-lod/tokyo2020/id/games/tokyo2020> ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "An event is part of exactly one Games: Tokyo 2020." ;
+    ] .
+
+olysh:GamesShape a sh:NodeShape ;
+    sh:targetClass dbo:Olympics ;                               # row 33
+    sh:pattern "^https://w3id\\.org/olympic-lod/tokyo2020/id/games/[a-z0-9]+$" ;
+    sh:property [                                               # row 34
+        sh:path foaf:name ; sh:name "name" ;
+        sh:datatype xsd:string ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "The Games have exactly one name." ;
+    ] ;
+    sh:property [                                               # row 35
+        sh:path owl:sameAs ; sh:name "same as" ;
+        sh:nodeKind sh:IRI ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:pattern "^http://www\\.wikidata\\.org/entity/Q[0-9]+$" ;
+        sh:message "The Games link to exactly one Wikidata item." ;
+    ] .
+
+
+# -----------------------------------------------------------------------------
+#  Medal award (rows 36–41)
+# -----------------------------------------------------------------------------
+
+olysh:MedalAwardShape a sh:NodeShape ;
+    sh:targetClass oly:MedalAward ;                             # row 36
+    sh:pattern "^https://w3id\\.org/olympic-lod/tokyo2020/id/medal/[0-9]+-[a-z0-9]{3}-[a-z0-9-]+$" ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [                                               # row 37
+        sh:path oly:awardedTo ; sh:name "awarded to" ;
+        sh:class foaf:Person ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A medal award goes to exactly one person." ;
+    ] ;
+    sh:property [                                               # row 38
+        sh:path oly:inEvent ; sh:name "in event" ;
+        sh:class dbo:SportsEvent ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A medal award is won in exactly one medal event." ;
+    ] ;
+    sh:property [                                               # row 39
+        sh:path oly:wonBy ; sh:name "won by" ;
+        sh:class dbo:SportsTeam ; sh:node olysh:TeamShape ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A medal award counts for exactly one Team (NOC + discipline), never a Squad." ;
+    ] ;
+    sh:property [                                               # row 40
+        sh:path oly:medalType ; sh:name "medal type" ;
+        sh:node olysh:MedalTypeConcept ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A medal award has exactly one medal type (gold, silver, bronze) from the Medal type code list." ;
+    ] ;
+    sh:property [                                               # row 41
+        sh:path dcterms:date ; sh:name "date" ;
+        sh:datatype xsd:date ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A medal award has exactly one date, as xsd:date (no time)." ;
+    ] .
+
+
+# -----------------------------------------------------------------------------
+#  Code lists (rows 42–47)
+# -----------------------------------------------------------------------------
+
+olysh:ConceptShape a sh:NodeShape ;
+    sh:targetClass skos:Concept ;                               # row 42
+    sh:pattern "^https://w3id\\.org/olympic-lod/scheme/(discipline|function|medal-type|event-category)/[a-z0-9-]+$" ;
+    sh:property [                                               # row 43
+        sh:path skos:prefLabel ; sh:name "label" ;
+        sh:datatype rdf:langString ; sh:languageIn ( "en" ) ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A code-list entry has exactly one label, tagged @en." ;
+    ] ;
+    sh:property [                                               # row 44
+        sh:path skos:notation ; sh:name "code" ;
+        sh:datatype xsd:string ; sh:maxCount 1 ;
+        sh:message "A code-list entry has at most one code (a plain string)." ;
+    ] ;
+    sh:property [                                               # row 45
+        sh:path skos:inScheme ; sh:name "in code list" ;
+        sh:class skos:ConceptScheme ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A code-list entry belongs to exactly one code list." ;
+    ] ;
+    sh:property [                                               # row 46
+        sh:path skos:exactMatch ; sh:name "same as" ;
+        sh:nodeKind sh:IRI ; sh:maxCount 1 ;
+        sh:pattern "^http://www\\.wikidata\\.org/entity/Q[0-9]+$" ;
+        sh:message "skos:exactMatch points to at most one Wikidata item." ;
+    ] .
+
+# Recommended values that apply to some code lists only (rows 44 and 46, R).
+# The entries are found through the properties that use them, so that a missing
+# recommendation stays a warning (inside sh:node it would become a violation).
+
+olysh:DisciplineEntryShape a sh:NodeShape ;
+    sh:targetObjectsOf dbo:sport , oly:officiatesIn ;
+    sh:property olysh:NotationRecommended , olysh:ExactMatchRecommended .
+
+olysh:EventCategoryEntryShape a sh:NodeShape ;
+    sh:targetObjectsOf oly:eventCategory ;
+    sh:property olysh:NotationRecommended .
+
+olysh:MedalTypeEntryShape a sh:NodeShape ;
+    sh:targetObjectsOf oly:medalType ;
+    sh:property olysh:ExactMatchRecommended .
+
+olysh:NotationRecommended a sh:PropertyShape ;               # row 44 (R)
+    sh:path skos:notation ; sh:name "code" ;
+    sh:minCount 1 ; sh:severity sh:Warning ;
+    sh:message "Recommended: the entry's short code (disciplines: 3-letter code; event categories: M/W/X/O)." .
+
+olysh:ExactMatchRecommended a sh:PropertyShape ;             # row 46 (R)
+    sh:path skos:exactMatch ; sh:name "same as" ;
+    sh:minCount 1 ; sh:severity sh:Warning ;
+    sh:message "Recommended: a link to the same thing in Wikidata (disciplines, medal types)." .
+
+olysh:ConceptSchemeShape a sh:NodeShape ;
+    sh:targetClass skos:ConceptScheme ;
+    sh:in ( <https://w3id.org/olympic-lod/scheme/discipline>
+            <https://w3id.org/olympic-lod/scheme/function>
+            <https://w3id.org/olympic-lod/scheme/medal-type>
+            <https://w3id.org/olympic-lod/scheme/event-category> ) ;
+    sh:property [                                               # row 47
+        sh:path skos:prefLabel ; sh:name "title" ;
+        sh:datatype rdf:langString ; sh:languageIn ( "en" ) ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "A code list has exactly one title, tagged @en." ;
+    ] .
+
+# Value shapes: an entry of one specific code list (used with sh:node).
+
+olysh:DisciplineConcept a sh:NodeShape ;
+    sh:class skos:Concept ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <https://w3id.org/olympic-lod/scheme/discipline> ] ;
+    sh:message "Expected an entry of the Discipline code list." .
+
+olysh:FunctionConcept a sh:NodeShape ;
+    sh:class skos:Concept , org:Role ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <https://w3id.org/olympic-lod/scheme/function> ] ;
+    sh:message "Expected an entry of the Function code list (a skos:Concept and org:Role)." .
+
+olysh:MedalTypeConcept a sh:NodeShape ;
+    sh:class skos:Concept ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <https://w3id.org/olympic-lod/scheme/medal-type> ] ;
+    sh:message "Expected an entry of the Medal type code list." .
+
+olysh:EventCategoryConcept a sh:NodeShape ;
+    sh:class skos:Concept ;
+    sh:property [ sh:path skos:inScheme ; sh:hasValue <https://w3id.org/olympic-lod/scheme/event-category> ] ;
+    sh:message "Expected an entry of the Event category code list." .
+
+
+# -----------------------------------------------------------------------------
+#  Dataset (rows 48–54)
+# -----------------------------------------------------------------------------
+
+olysh:DatasetShape a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;                               # row 48
+    sh:pattern "^https://w3id\\.org/olympic-lod/[a-z0-9-]+/dataset$" ;
+    sh:property [                                               # row 49
+        sh:path dcterms:title ; sh:name "title" ;
+        sh:datatype rdf:langString ; sh:languageIn ( "en" ) ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "The dataset has exactly one title, tagged @en." ;
+    ] ;
+    sh:property [                                               # row 50
+        sh:path dcterms:description ; sh:name "description" ;
+        sh:datatype rdf:langString ; sh:languageIn ( "en" ) ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "The dataset has exactly one description, tagged @en." ;
+    ] ;
+    sh:property [                                               # row 51
+        sh:path dcterms:license ; sh:name "licence" ;
+        sh:hasValue <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "The dataset's licence is CC BY-NC-SA 4.0 (inherited from the source), given as an IRI." ;
+    ] ;
+    sh:property [                                               # row 52
+        sh:path dcterms:creator ; sh:name "creator" ;
+        sh:class foaf:Person ; sh:minCount 1 ;
+        sh:message "The dataset has at least one creator (foaf:Person)." ;
+    ] ;
+    sh:property [                                               # row 53
+        sh:path dcterms:source ; sh:name "source" ;
+        sh:nodeKind sh:IRI ; sh:minCount 1 ;
+        sh:message "The dataset names at least one source, as an IRI." ;
+    ] ;
+    sh:property [                                               # row 54
+        sh:path dcterms:issued ; sh:name "date issued" ;
+        sh:datatype xsd:date ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "The dataset has exactly one issue date, as xsd:date." ;
+    ] .

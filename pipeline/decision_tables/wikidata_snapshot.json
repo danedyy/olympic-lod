@@ -1,0 +1,1033 @@
+{
+ "retrieved": "2026-11-25",
+ "endpoint": "https://query.wikidata.org/sparql",
+ "nocs": {
+  "AFG": {
+   "Q946509": "Afghanistan National Olympic Committee"
+  },
+  "ALB": {
+   "Q1209748": "Olympic Committee of Albania"
+  },
+  "ALG": {
+   "Q1136992": "Algerian Olympic Committee"
+  },
+  "AND": {
+   "Q1114870": "Andorran Olympic Committee"
+  },
+  "ANG": {
+   "Q3684425": "Angolan Olympic Committee"
+  },
+  "ANT": {
+   "Q3626682": "The Antigua and Barbuda Olympic Association"
+  },
+  "ARG": {
+   "Q1153430": "Argentine Olympic Committee"
+  },
+  "ARM": {
+   "Q1185597": "Armenian Olympic Committee"
+  },
+  "ARU": {
+   "Q2985571": "Aruban Olympic Committee"
+  },
+  "AUS": {
+   "Q7076184": "Oceania Paralympic Committee",
+   "Q768843": "Australian Olympic Committee"
+  },
+  "AUT": {
+   "Q306692": "Austrian Olympic Committee"
+  },
+  "AZE": {
+   "Q1208145": "National Olympic Committee of the Republic of Azerbaijan"
+  },
+  "BAH": {
+   "Q3626674": "Bahamas Olympic Committee"
+  },
+  "BAN": {
+   "Q1132938": "Bangladesh Olympic Association"
+  },
+  "BAR": {
+   "Q861094": "Barbados Olympic Association"
+  },
+  "BDI": {
+   "Q3684438": "Burundi National Olympic Committee"
+  },
+  "BEL": {
+   "Q2021554": "Belgian Olympic and Interfederal Committee"
+  },
+  "BEN": {
+   "Q4888023": "Benin National Olympic and Sports Committee"
+  },
+  "BER": {
+   "Q3626676": "Bermuda Olympic Association"
+  },
+  "BHU": {
+   "Q1050122": "Bhutan Olympic Committee"
+  },
+  "BIH": {
+   "Q2577457": "Olympic Committee of Bosnia and Herzegovina"
+  },
+  "BIZ": {
+   "Q3626679": "Belize Olympic and Commonwealth Games Association"
+  },
+  "BLR": {
+   "Q2570268": "Belarus Olympic Committee"
+  },
+  "BOL": {
+   "Q3684426": "Bolivian Olympic Committee"
+  },
+  "BOT": {
+   "Q860077": "Botswana National Olympic Committee"
+  },
+  "BRA": {
+   "Q2262032": "Brazilian Olympic Committee"
+  },
+  "BRN": {
+   "Q859340": "Bahrain Olympic Committee"
+  },
+  "BRU": {
+   "Q859321": "Brunei Darussalam National Olympic Council"
+  },
+  "BUL": {
+   "Q775187": "Bulgarian Olympic Committee"
+  },
+  "BUR": {
+   "Q3684463": "Burkinabé National Olympic and Sports Committee"
+  },
+  "CAF": {
+   "Q3684418": "Central African National Olympic and Sports Committee"
+  },
+  "CAM": {
+   "Q859541": "National Olympic Committee of Cambodia"
+  },
+  "CAN": {
+   "Q1032282": "Canadian Olympic Committee"
+  },
+  "CAY": {
+   "Q3684487": "Cayman Islands Olympic Committee"
+  },
+  "CGO": {
+   "Q3684419": "Congolese National Olympic and Sports Committee"
+  },
+  "CHA": {
+   "Q3684501": "Chadian Olympic and Sports Committee"
+  },
+  "CHI": {
+   "Q1650884": "Chilean Olympic Committee"
+  },
+  "CHN": {
+   "Q1135741": "Sports Federation and Olympic Committee of Hong Kong",
+   "Q56270": "Chinese Olympic Committee"
+  },
+  "CIV": {
+   "Q3684452": "Comité National Olympique de Côte d'Ivoire"
+  },
+  "CMR": {
+   "Q3684464": "Cameroon Olympic and Sports Committee"
+  },
+  "COD": {
+   "Q2985570": "Congo Olympic Committee"
+  },
+  "COK": {
+   "Q3684467": "Cook Islands Sports and National Olympic Committee"
+  },
+  "COL": {
+   "Q2985576": "Colombian Olympic Committee"
+  },
+  "COM": {
+   "Q2985578": "Olympic and Sports Committee of the Comoros"
+  },
+  "CPV": {
+   "Q3684427": "Cape Verde National Olympic Committee"
+  },
+  "CRC": {
+   "Q3684483": "Costa Rican Olympic Committee"
+  },
+  "CRO": {
+   "Q1632564": "Croatian Olympic Committee"
+  },
+  "CUB": {
+   "Q859910": "Cuban Olympic Committee"
+  },
+  "CYP": {
+   "Q2397471": "Cyprus Olympic Committee"
+  },
+  "CZE": {
+   "Q2626955": "Czech Olympic Committee"
+  },
+  "DEN": {
+   "Q1164315": "National Olympic Committee and Sports Confederation of Denmark"
+  },
+  "DMA": {
+   "Q3684484": "Dominica Olympic Committee"
+  },
+  "DOM": {
+   "Q859937": "Dominican Republic Olympic Committee"
+  },
+  "ECU": {
+   "Q511559": "Ecuadorian National Olympic Committee"
+  },
+  "EGY": {
+   "Q1045410": "Egyptian Olympic Committee"
+  },
+  "ERI": {
+   "Q3684439": "Eritrea National Olympic Committee"
+  },
+  "ESA": {
+   "Q3684493": "El Salvador Olympic Committee"
+  },
+  "ESP": {
+   "Q24084536": "Catalan Olympic Committee",
+   "Q2469149": "Spanish Olympic Committee"
+  },
+  "EST": {
+   "Q775081": "Estonian Olympic Committee"
+  },
+  "ETH": {
+   "Q1649104": "Ethiopian Olympic Committee"
+  },
+  "FIJ": {
+   "Q1190266": "Oceania National Olympic Committees",
+   "Q3627241": "Fiji Association of Sports and National Olympic Committee"
+  },
+  "FIN": {
+   "Q2035528": "Finnish Olympic Committee"
+  },
+  "FRA": {
+   "Q1650165": "French National Olympic and Sports Committee",
+   "Q2985569": "Comité Olympique de Polynésie Française"
+  },
+  "FSM": {
+   "Q3684447": "Federated States of Micronesia National Olympic Committee"
+  },
+  "GAB": {
+   "Q3684428": "Gabonese Olympic Committee"
+  },
+  "GAM": {
+   "Q1492934": "The Gambia National Olympic Committee"
+  },
+  "GBR": {
+   "Q1135741": "Sports Federation and Olympic Committee of Hong Kong",
+   "Q849756": "British Olympic Association"
+  },
+  "GBS": {
+   "Q3684485": "Guinea-Bissau Olympic Committee"
+  },
+  "GDR": {
+   "Q8313786": "National Olympic Committee of the German Democratic Republic"
+  },
+  "GEO": {
+   "Q2607638": "Georgian National Olympic Committee"
+  },
+  "GER": {
+   "Q323728": "German Olympic Sports Confederation"
+  },
+  "GHA": {
+   "Q3684429": "Ghana Olympic Committee"
+  },
+  "GRE": {
+   "Q1358361": "Hellenic Olympic Committee"
+  },
+  "GRN": {
+   "Q3684494": "Grenada Olympic Committee"
+  },
+  "GUA": {
+   "Q3684430": "Guatemalan Olympic Committee"
+  },
+  "GUI": {
+   "Q3684441": "Guinean National Olympic and Sports Committee"
+  },
+  "GUY": {
+   "Q3684431": "Guyana Olympic Association"
+  },
+  "HAI": {
+   "Q2985577": "Haitian Olympic Committee"
+  },
+  "HKG": {
+   "Q1135741": "Sports Federation and Olympic Committee of Hong Kong"
+  },
+  "HON": {
+   "Q3684433": "Honduran Olympic Committee"
+  },
+  "HUN": {
+   "Q543216": "Hungarian Olympic Committee"
+  },
+  "INA": {
+   "Q1130282": "National Sports Committee of Indonesia",
+   "Q126177452": "",
+   "Q4333874": "Indonesian Olympic Committee",
+   "Q64168190": "Indonesia Table Tennis Association",
+   "Q65095442": "Indonesia Badminton Association of Prabumulih City"
+  },
+  "IND": {
+   "Q1371252": "Indian Olympic Association"
+  },
+  "IRI": {
+   "Q1045672": "National Olympic Committee of the Islamic Republic of Iran"
+  },
+  "IRL": {
+   "Q2358141": "Olympic Federation of Ireland"
+  },
+  "IRQ": {
+   "Q859534": "National Olympic Committee of Iraq"
+  },
+  "ISL": {
+   "Q1133648": "The National Olympic and Sports Association of Iceland"
+  },
+  "ISR": {
+   "Q968491": "Olympic Committee of Israel"
+  },
+  "ITA": {
+   "Q1114833": "Italian National Olympic Committee"
+  },
+  "IVB": {
+   "Q3684490": "British Virgin Islands Olympic Committee"
+  },
+  "JAM": {
+   "Q3626675": "Jamaica Olympic Association"
+  },
+  "JOR": {
+   "Q1045120": "Jordan Olympic Committee"
+  },
+  "JPN": {
+   "Q971827": "Japanese Olympic Committee"
+  },
+  "KAZ": {
+   "Q1046059": "National Olympic Committee of the Republic of Kazakhstan"
+  },
+  "KEN": {
+   "Q3684442": "National Olympic Committee Kenya"
+  },
+  "KGZ": {
+   "Q859630": "National Olympic Committee of the Republic of Kyrgyzstan"
+  },
+  "KIR": {
+   "Q1708269": "Kiribati National Olympic Committee"
+  },
+  "KOR": {
+   "Q493750": "Korean Sport & Olympic Committee"
+  },
+  "KOS": {
+   "Q3684481": "Olympic Committee of Kosovo"
+  },
+  "KSA": {
+   "Q1186524": "Saudi Arabian Olympic Committee"
+  },
+  "KUW": {
+   "Q1185220": "Kuwait Olympic Committee"
+  },
+  "LAO": {
+   "Q781269": "National Olympic Committee of Lao"
+  },
+  "LAT": {
+   "Q1185588": "Latvian Olympic Committee"
+  },
+  "LBA": {
+   "Q3684434": "Libyan Olympic Committee"
+  },
+  "LBN": {
+   "Q858545": "Lebanese Olympic Committee"
+  },
+  "LBR": {
+   "Q3684444": "Liberia National Olympic Committee"
+  },
+  "LCA": {
+   "Q3687287": "Saint Lucia Olympic Committee"
+  },
+  "LES": {
+   "Q3684443": "Lesotho National Olympic Committee"
+  },
+  "LIE": {
+   "Q860080": "Liechtenstein Olympic Committee"
+  },
+  "LTU": {
+   "Q1045788": "Lithuanian National Olympic Committee"
+  },
+  "LUX": {
+   "Q2411931": "Luxembourgish Olympic and Sporting Committee"
+  },
+  "MAC": {
+   "Q370950": "Macau Sports and Olympic Committee"
+  },
+  "MAD": {
+   "Q2985582": "Olympic Committee"
+  },
+  "MAR": {
+   "Q922900": "Moroccan National Olympic Committee"
+  },
+  "MAS": {
+   "Q1044911": "Olympic Council of Malaysia"
+  },
+  "MAW": {
+   "Q3626678": "Olympic and Commonwealth Games Association of Malawi"
+  },
+  "MDA": {
+   "Q3684417": "National Olympic Committee of the Republic of Moldova"
+  },
+  "MDV": {
+   "Q859332": "Maldives Olympic Committee"
+  },
+  "MEX": {
+   "Q3684437": "Comité Olímpico Mexicano"
+  },
+  "MGL": {
+   "Q1046323": "Mongolian National Olympic Committee"
+  },
+  "MHL": {
+   "Q3684456": "Marshall Islands National Olympic Committee"
+  },
+  "MKD": {
+   "Q2400219": "Olympic Committee of North Macedonia"
+  },
+  "MLI": {
+   "Q3684466": "National Olympic and Sports Committee of Mali"
+  },
+  "MLT": {
+   "Q1045428": "Malta Olympic Committee"
+  },
+  "MNE": {
+   "Q1650168": "Montenegrin Olympic Committee"
+  },
+  "MON": {
+   "Q1114926": "Comité Olympique Monégasque"
+  },
+  "MOZ": {
+   "Q3684450": "Mozambique National Olympic Committee"
+  },
+  "MRI": {
+   "Q3684436": "Mauritius Olympic Committee"
+  },
+  "MTN": {
+   "Q3684465": "Mauritanian National Olympic and Sports Committee"
+  },
+  "MYA": {
+   "Q859606": "Myanmar Olympic Committee"
+  },
+  "NAM": {
+   "Q541382": "Namibian National Olympic Committee"
+  },
+  "NCA": {
+   "Q3684469": "Nicaraguan Olympic Committee"
+  },
+  "NED": {
+   "Q1650156": "NOC*NSF"
+  },
+  "NEP": {
+   "Q859585": "Nepal Olympic Committee"
+  },
+  "NGR": {
+   "Q5939615": "Nigeria Olympic Committee"
+  },
+  "NIG": {
+   "Q7033085": "Nigerien Olympic and National Sports Committee"
+  },
+  "NOR": {
+   "Q1999116": "Norwegian Olympic and Paralympic Committee and Confederation of Sports"
+  },
+  "NRU": {
+   "Q1353688": "Nauru Olympic Committee"
+  },
+  "NZL": {
+   "Q1648429": "New Zealand Olympic Committee"
+  },
+  "OMA": {
+   "Q859823": "Oman Olympic Committee"
+  },
+  "PAK": {
+   "Q865299": "Pakistan Olympic Association"
+  },
+  "PAN": {
+   "Q3684495": "Panama Olympic Committee"
+  },
+  "PAR": {
+   "Q3684472": "Paraguayan Olympic Committee"
+  },
+  "PER": {
+   "Q589973": "Peruvian Olympic Committee"
+  },
+  "PHI": {
+   "Q1061271": "Philippine Olympic Committee"
+  },
+  "PLE": {
+   "Q1049874": "Palestine Olympic Committee"
+  },
+  "PLW": {
+   "Q3684461": "Palau National Olympic Committee"
+  },
+  "PNG": {
+   "Q3684486": "Papua New Guinea Olympic Committee"
+  },
+  "POL": {
+   "Q2610864": "Polish Olympic Committee"
+  },
+  "POR": {
+   "Q2543365": "Olympic Committee of Portugal"
+  },
+  "PRK": {
+   "Q1132932": "Olympic Committee of the Democratic People's Republic of Korea"
+  },
+  "QAT": {
+   "Q1045494": "Qatar Olympic Committee"
+  },
+  "ROU": {
+   "Q1648635": "Romanian Olympic and Sports Committee"
+  },
+  "RSA": {
+   "Q379480": "South African Sports Confederation and Olympic Committee"
+  },
+  "RUS": {
+   "Q783625": "Russian Olympic Committee"
+  },
+  "RWA": {
+   "Q3684421": "Rwanda National Olympic and Sports Committee"
+  },
+  "SAM": {
+   "Q3627237": "Samoa Association of Sports and National Olympic Committee"
+  },
+  "SCG": {
+   "Q31181299": "Olympic Committee of Serbia and Montenegro"
+  },
+  "SEN": {
+   "Q3684420": "Senegalese National Olympic and Sports Committee"
+  },
+  "SEY": {
+   "Q3626680": "Seychelles Olympic and Commonwealth Games Association"
+  },
+  "SGP": {
+   "Q1054147": "Singapore National Olympic Council"
+  },
+  "SKN": {
+   "Q3684497": "St. Kitts and Nevis Olympic Committee"
+  },
+  "SLE": {
+   "Q3684455": "National Olympic Committee of Sierra Leone"
+  },
+  "SLO": {
+   "Q1133461": "Slovenian Olympic Committee"
+  },
+  "SMR": {
+   "Q516324": "Comitato Olimpico Nazionale Sammarinese"
+  },
+  "SOL": {
+   "Q3684457": "National Olympic Committee of Solomon Islands"
+  },
+  "SOM": {
+   "Q7559146": "Somali Olympic Committee"
+  },
+  "SPA": {
+   "Q24084536": "Catalan Olympic Committee",
+   "Q2469149": "Spanish Olympic Committee"
+  },
+  "SRB": {
+   "Q587239": "Olympic Committee of Serbia"
+  },
+  "SRI": {
+   "Q858301": "National Olympic Committee of Sri Lanka"
+  },
+  "SSD": {
+   "Q20746111": "South Sudan National Olympic Committee"
+  },
+  "STP": {
+   "Q3208107": "São Tomé and Príncipe Olympic Committee"
+  },
+  "SUD": {
+   "Q5996183": "Sudan Olympic Committee"
+  },
+  "SUI": {
+   "Q679950": "Swiss Olympic"
+  },
+  "SUR": {
+   "Q860565": "Suriname Olympic Committee"
+  },
+  "SVK": {
+   "Q1185604": "Slovak Olympic and Sports Committee"
+  },
+  "SWE": {
+   "Q179688": "Swedish Olympic Committee"
+  },
+  "SWZ": {
+   "Q3626681": "Eswatini Olympic and Commonwealth Games Association"
+  },
+  "SYR": {
+   "Q859516": "Syrian Olympic Committee"
+  },
+  "TAN": {
+   "Q3684474": "Tanzania Olympic Committee"
+  },
+  "TGA": {
+   "Q3627236": "Tonga Sports Association and National Olympic Committee"
+  },
+  "THA": {
+   "Q1133244": "National Olympic Committee of Thailand"
+  },
+  "TJK": {
+   "Q1053989": "National Olympic Committee of the Republic of Tajikistan"
+  },
+  "TKM": {
+   "Q859577": "National Olympic Committee of Turkmenistan"
+  },
+  "TLS": {
+   "Q98922": "National Olympic Committee of Timor-Leste"
+  },
+  "TOG": {
+   "Q3684446": "Togolese National Olympic Committee"
+  },
+  "TPE": {
+   "Q708615": "Chinese Taipei Olympic Committee"
+  },
+  "TTO": {
+   "Q3684500": "Trinidad and Tobago Olympic Committee"
+  },
+  "TUN": {
+   "Q1156014": "Tunisian Olympic Committee"
+  },
+  "TUR": {
+   "Q1185611": "Turkish Olympic Committee"
+  },
+  "TUV": {
+   "Q3627238": "Tuvalu Association of Sports and National Olympic Committee"
+  },
+  "UAE": {
+   "Q609513": "United Arab Emirates National Olympic Committee"
+  },
+  "UGA": {
+   "Q168528": "Uganda Olympic Committee"
+  },
+  "UKR": {
+   "Q1210020": "National Olympic Committee of Ukraine"
+  },
+  "URU": {
+   "Q3684476": "Uruguayan Olympic Committee"
+  },
+  "USA": {
+   "Q1418438": "United States Olympic & Paralympic Committee",
+   "Q2985553": "Puerto Rico Olympic Committee",
+   "Q3684449": "Guam National Olympic Committee",
+   "Q3684489": "Virgin Islands Olympic Committee"
+  },
+  "UZB": {
+   "Q859554": "National Olympic Committee of the Republic of Uzbekistan"
+  },
+  "VAN": {
+   "Q3627240": "Vanuatu Association of Sports and National Olympic Committee"
+  },
+  "VEN": {
+   "Q3684477": "Venezuelan Olympic Committee"
+  },
+  "VIE": {
+   "Q1185002": "Vietnam Olympic Committee"
+  },
+  "VIN": {
+   "Q3684498": "Saint Vincent and the Grenadines Olympic Committee"
+  },
+  "YEM": {
+   "Q525681": "Yemen Olympic Committee"
+  },
+  "ZAM": {
+   "Q3684460": "National Olympic Committee of Zambia"
+  },
+  "ZIM": {
+   "Q3684479": "Zimbabwe Olympic Committee"
+  }
+ },
+ "countries": {
+  "ARE": {
+   "Q878": "United Arab Emirates"
+  },
+  "ARG": {
+   "Q414": "Argentina"
+  },
+  "ARM": {
+   "Q399": "Armenia"
+  },
+  "AUS": {
+   "Q408": "Australia"
+  },
+  "AUT": {
+   "Q40": "Austria"
+  },
+  "AZE": {
+   "Q227": "Azerbaijan"
+  },
+  "BEL": {
+   "Q31": "Belgium"
+  },
+  "BGR": {
+   "Q219": "Bulgaria"
+  },
+  "BLR": {
+   "Q184": "Belarus"
+  },
+  "BOL": {
+   "Q750": "Bolivia"
+  },
+  "BRA": {
+   "Q155": "Brazil"
+  },
+  "BRB": {
+   "Q244": "Barbados"
+  },
+  "CAN": {
+   "Q16": "Canada"
+  },
+  "CHE": {
+   "Q39": "Switzerland"
+  },
+  "CHL": {
+   "Q298": "Chile"
+  },
+  "CHN": {
+   "Q148": "People's Republic of China"
+  },
+  "CMR": {
+   "Q1009": "Cameroon"
+  },
+  "COL": {
+   "Q739": "Colombia"
+  },
+  "CRI": {
+   "Q800": "Costa Rica"
+  },
+  "CUB": {
+   "Q241": "Cuba"
+  },
+  "CZE": {
+   "Q213": "Czech Republic"
+  },
+  "DEU": {
+   "Q183": "Germany"
+  },
+  "DNK": {
+   "Q35": "Denmark"
+  },
+  "DOM": {
+   "Q786": "Dominican Republic"
+  },
+  "DZA": {
+   "Q262": "Algeria"
+  },
+  "ECU": {
+   "Q736": "Ecuador"
+  },
+  "EGY": {
+   "Q79": "Egypt"
+  },
+  "ESP": {
+   "Q29": "Spain"
+  },
+  "ETH": {
+   "Q115": "Ethiopia"
+  },
+  "FIN": {
+   "Q33": "Finland"
+  },
+  "FRA": {
+   "Q142": "France"
+  },
+  "GAB": {
+   "Q1000": "Gabon"
+  },
+  "GBR": {
+   "Q145": "United Kingdom"
+  },
+  "GEO": {
+   "Q230": "Georgia"
+  },
+  "GIN": {
+   "Q1006": "Guinea"
+  },
+  "GRC": {
+   "Q41": "Greece"
+  },
+  "HKG": {
+   "Q8646": "Hong Kong"
+  },
+  "HND": {
+   "Q783": "Honduras"
+  },
+  "HRV": {
+   "Q224": "Croatia"
+  },
+  "HUN": {
+   "Q28": "Hungary"
+  },
+  "IDN": {
+   "Q252": "Indonesia"
+  },
+  "IND": {
+   "Q668": "India"
+  },
+  "IRL": {
+   "Q27": "Ireland"
+  },
+  "IRN": {
+   "Q794": "Iran"
+  },
+  "IRQ": {
+   "Q796": "Iraq"
+  },
+  "ISR": {
+   "Q801": "Israel"
+  },
+  "ITA": {
+   "Q38": "Italy"
+  },
+  "JAM": {
+   "Q766": "Jamaica"
+  },
+  "JOR": {
+   "Q810": "Jordan"
+  },
+  "JPN": {
+   "Q17": "Japan"
+  },
+  "KAZ": {
+   "Q232": "Kazakhstan"
+  },
+  "KEN": {
+   "Q114": "Kenya"
+  },
+  "KGZ": {
+   "Q813": "Kyrgyzstan"
+  },
+  "KOR": {
+   "Q884": "South Korea"
+  },
+  "KWT": {
+   "Q817": "Kuwait"
+  },
+  "LBN": {
+   "Q822": "Lebanon"
+  },
+  "LKA": {
+   "Q854": "Sri Lanka"
+  },
+  "LSO": {
+   "Q1013": "Lesotho"
+  },
+  "LTU": {
+   "Q37": "Lithuania"
+  },
+  "LVA": {
+   "Q211": "Latvia"
+  },
+  "MAR": {
+   "Q1028": "Morocco"
+  },
+  "MDA": {
+   "Q217": "Moldova"
+  },
+  "MEX": {
+   "Q96": "Mexico"
+  },
+  "MKD": {
+   "Q221": "North Macedonia"
+  },
+  "MNE": {
+   "Q236": "Montenegro"
+  },
+  "MNG": {
+   "Q711": "Mongolia"
+  },
+  "MOZ": {
+   "Q1029": "Mozambique"
+  },
+  "MRT": {
+   "Q1025": "Mauritania"
+  },
+  "MUS": {
+   "Q1027": "Mauritius"
+  },
+  "MWI": {
+   "Q1020": "Malawi"
+  },
+  "MYS": {
+   "Q833": "Malaysia"
+  },
+  "NGA": {
+   "Q1033": "Nigeria"
+  },
+  "NLD": {
+   "Q29999": "Kingdom of the Netherlands"
+  },
+  "NOR": {
+   "Q20": "Norway"
+  },
+  "NZL": {
+   "Q664": "New Zealand"
+  },
+  "OMN": {
+   "Q842": "Oman"
+  },
+  "PAN": {
+   "Q804": "Panama"
+  },
+  "PER": {
+   "Q419": "Peru"
+  },
+  "PHL": {
+   "Q928": "Philippines"
+  },
+  "POL": {
+   "Q36": "Poland"
+  },
+  "PRT": {
+   "Q45": "Portugal"
+  },
+  "QAT": {
+   "Q846": "Qatar"
+  },
+  "ROU": {
+   "Q218": "Romania"
+  },
+  "RUS": {
+   "Q159": "Russia"
+  },
+  "RWA": {
+   "Q1037": "Rwanda"
+  },
+  "SAU": {
+   "Q851": "Saudi Arabia"
+  },
+  "SDN": {
+   "Q1049": "Sudan"
+  },
+  "SEN": {
+   "Q1041": "Senegal"
+  },
+  "SGP": {
+   "Q334": "Singapore"
+  },
+  "SLV": {
+   "Q792": "El Salvador"
+  },
+  "SRB": {
+   "Q403": "Serbia"
+  },
+  "SUR": {
+   "Q730": "Suriname"
+  },
+  "SVK": {
+   "Q214": "Slovakia"
+  },
+  "SVN": {
+   "Q215": "Slovenia"
+  },
+  "SWE": {
+   "Q34": "Sweden"
+  },
+  "SYC": {
+   "Q1042": "Seychelles"
+  },
+  "THA": {
+   "Q869": "Thailand"
+  },
+  "TJK": {
+   "Q863": "Tajikistan"
+  },
+  "TON": {
+   "Q678": "Tonga"
+  },
+  "TTO": {
+   "Q754": "Trinidad and Tobago"
+  },
+  "TUN": {
+   "Q948": "Tunisia"
+  },
+  "TUR": {
+   "Q43": "Turkey"
+  },
+  "TWN": {
+   "Q865": "Taiwan"
+  },
+  "UGA": {
+   "Q1036": "Uganda"
+  },
+  "UKR": {
+   "Q212": "Ukraine"
+  },
+  "URY": {
+   "Q77": "Uruguay"
+  },
+  "USA": {
+   "Q30": "United States"
+  },
+  "UZB": {
+   "Q265": "Uzbekistan"
+  },
+  "VEN": {
+   "Q717": "Venezuela"
+  },
+  "ZAF": {
+   "Q258": "South Africa"
+  },
+  "ZWE": {
+   "Q954": "Zimbabwe"
+  }
+ },
+ "labels": {
+  "Q1031445": "cross-country cycling",
+  "Q108429": "archery",
+  "Q10980": "triathlon",
+  "Q1141850": "canoe sprint",
+  "Q11419": "karate",
+  "Q11420": "judo",
+  "Q12100": "fencing",
+  "Q14085739": "sailing",
+  "Q1418438": "United States Olympic & Paralympic Committee",
+  "Q1455": "field hockey",
+  "Q15243387": "Olympic gold medal",
+  "Q15889641": "Olympic silver medal",
+  "Q15889643": "Olympic bronze medal",
+  "Q159354": "rowing",
+  "Q159992": "surfing",
+  "Q16240947": "BMX racing",
+  "Q1650165": "French National Olympic and Sports Committee",
+  "Q1734": "volleyball",
+  "Q179226": "equestrianism",
+  "Q180692": "synchronized swimming",
+  "Q181278": "2020 Summer Olympics",
+  "Q206989": "shooting sports",
+  "Q210550": "3x3 basketball",
+  "Q2192643": "freestyle BMX",
+  "Q221635": "track cycling",
+  "Q2469149": "Spanish Olympic Committee",
+  "Q270102": "rugby sevens",
+  "Q2736": "association football",
+  "Q2985553": "Puerto Rico Olympic Committee",
+  "Q31874": "canoe slalom",
+  "Q31920": "competitive swimming",
+  "Q32112": "boxing",
+  "Q32485": "modern pentathlon",
+  "Q326827": "artistic gymnastics",
+  "Q3609": "road bicycle racing",
+  "Q3627241": "Fiji Association of Sports and National Olympic Committee",
+  "Q36389": "taekwondo",
+  "Q3684440": "Djibouti National Olympic Committee",
+  "Q3684449": "Guam National Olympic Committee",
+  "Q3684453": "Equatorial Guinea National Olympic Committee",
+  "Q3684459": "American Samoa National Olympic Committee",
+  "Q3684489": "Virgin Islands Olympic Committee",
+  "Q3930": "table tennis",
+  "Q4333874": "Indonesian Olympic Committee",
+  "Q4543": "beach volleyball",
+  "Q465014": "trampoline gymnastics",
+  "Q5133668": "competition climbing",
+  "Q5372": "basketball",
+  "Q5377": "golf",
+  "Q542": "athletics",
+  "Q56270": "Chinese Olympic Committee",
+  "Q61465": "rhythmic gymnastics",
+  "Q631004": "open water swimming",
+  "Q7291": "badminton",
+  "Q768843": "Australian Olympic Committee",
+  "Q7707": "water polo",
+  "Q7735": "diving (sport)",
+  "Q783625": "Russian Olympic Committee",
+  "Q83462": "weightlifting",
+  "Q838089": "amateur wrestling",
+  "Q8418": "handball",
+  "Q842284": "skateboarding",
+  "Q847": "tennis",
+  "Q849756": "British Olympic Association"
+ }
+}

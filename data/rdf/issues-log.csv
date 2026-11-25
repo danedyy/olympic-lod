@@ -1,0 +1,414 @@
+stage,file,line,key,issue,action
+clean,athletes.csv,,DMA,NOC name 'Dominique': Source misspelling: Dominica,name kept as in the source
+clean,athletes.csv,,EOR,NOC name 'EOR': Refugee Olympic Team: no country; name missing in source,name kept as in the source
+clean,athletes.csv,,LBN,NOC name 'LBN': Name missing in source: Lebanon,name kept as in the source
+clean,athletes.csv,,ROC,NOC name 'ROC': Russian Olympic Committee: not a country,name kept as in the source
+clean,athletes.csv,169,1285948,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,188,1304897,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,369,1325290,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,372,1327457,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,521,1348776,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,568,1285951,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,595,1301044,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,743,1465468,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,747,1312360,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,787,1351034,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,793,1365551,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,1239,1462914,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,1257,1432705,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,1345,1482700,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,1448,1294270,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,1598,1301899,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,1613,1282036,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,1695,1316414,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,1907,1449823,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,2024,1432427,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,2088,1326934,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,2152,1312138,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,2241,1473300,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,2907,1300487,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,2935,1343137,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,2937,1340415,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3133,1444586,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3149,1482704,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3207,1478360,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3223,1316854,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3290,1312964,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3413,1304776,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3434,1894698,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3437,1312178,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3480,1332548,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3566,1304074,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3634,1728922,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3692,1332457,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3729,1331569,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3819,1302269,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3844,1315932,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3908,1367065,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3960,1329602,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3967,1328857,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,3991,1350630,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,4052,1319547,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,4272,1466472,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,4327,1478369,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,4358,1319525,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,4376,1284848,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,4416,1329617,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,4454,1475698,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,4507,1315245,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,4553,1465786,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,4667,1332553,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,4720,1450666,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,4746,1332557,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,4761,1475703,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,4813,1312096,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,4934,1473334,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,4996,1305525,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5083,1332564,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5112,1332569,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5146,1464754,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5175,1316845,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5176,1318259,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5192,1309654,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5298,1438120,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5310,1436007,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5450,1345474,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5460,1346451,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5468,1329657,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5473,1317879,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5476,1308686,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5509,1406340,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5528,1450130,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5557,1308685,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5562,1407906,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5725,1286052,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5740,1351056,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5780,1335356,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5831,1321097,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5882,1297442,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,5908,1464755,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,6064,1428016,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,6332,1312926,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,6404,1330778,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,6477,1391755,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,6534,1388930,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,6540,1282049,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,6711,1473352,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,6748,1325174,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,6812,1329621,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,6840,1330794,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,6868,1329609,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,7130,1410796,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,7140,1428179,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,7213,1329630,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,7608,1367088,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,7634,1449450,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,7747,1326657,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,7788,1331912,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,7893,1340624,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,7921,1444606,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,8055,1316647,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,8111,1319529,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,8230,1325883,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,8286,1441880,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,8340,1381582,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,8497,1482689,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,8503,1312189,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,8529,1348108,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,8882,1343279,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,8933,1314986,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,8968,1300482,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,8972,1466342,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9020,1467286,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9023,1459601,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9027,1444614,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9054,1355062,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9152,1313412,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9206,1474581,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9226,1464762,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9236,1341495,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9409,1329605,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9472,1291267,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9490,1332580,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9517,1308710,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9525,1308694,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9527,1308705,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9599,1473385,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9616,1467950,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9617,1467951,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9672,1319520,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9700,1476578,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9701,1353793,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9803,1348978,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,9940,1444713,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,10046,1318236,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,10183,1473388,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,10299,1464766,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,10306,1334920,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,10308,1282057,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,10350,1434261,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,10386,1317293,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,10388,1285796,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,10390,1449893,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,10832,1477256,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,10989,1366699,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,10993,1350647,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,11005,1282054,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,11026,1467453,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,11196,1330776,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,11264,1352473,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,11390,1474986,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,11421,1348639,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,11497,1483096,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,11578,1388549,no gender in the source,dbo:gender left empty (never guessed)
+clean,athletes.csv,11581,1313075,no gender in the source,dbo:gender left empty (never guessed)
+clean,technical_officials.csv,14,1698039,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,24,1572013,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,32,1573147,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,34,1573200,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,53,1572088,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,65,1573192,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,71,1629898,listed in Beach Volleyball and Volleyball (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,76,1572040,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,80,1573199,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,85,1571973,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,97,1573191,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,103,1571988,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,107,1573153,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,113,1572034,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,122,1573176,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,130,1573152,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,141,1573216,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,153,1572044,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,167,1572091,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,169,1573148,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,196,1571985,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,199,1572069,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,209,1573217,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,230,1573203,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,239,1573207,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,255,1573189,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,262,1572095,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,264,1573178,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,293,1573210,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,300,1573181,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,304,1572037,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,308,1571998,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,331,1571994,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,337,1573202,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,370,1573600,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,371,1573600,second spelling of the name: 'KELEMEN van de KONIJNENBU Ildiko',kept the first spelling 'KELEMEN v.d. KONIJNENBURG Ildiko' (foaf:name is 1..1)
+clean,technical_officials.csv,374,1572097,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,390,1571986,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,424,1572010,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,428,1571987,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,441,1572018,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,445,1572049,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,456,1573218,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,463,1573219,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,488,1572090,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,494,1573183,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,511,1573157,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,515,1573198,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,540,1573208,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,550,1573204,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,559,1573212,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,571,1629867,listed in Beach Volleyball and Volleyball (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,574,1572014,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,578,1572092,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,582,1573187,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,627,1573156,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,631,1572015,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,636,1573166,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,640,1573211,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,670,1635246,listed in Beach Volleyball and Volleyball (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,677,1629891,listed in Beach Volleyball and Volleyball (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,677,1629891,"same ID under two nationalities: BRA, PRT",kept both dbo:nationality links
+clean,technical_officials.csv,692,1573194,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,722,1573175,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,726,1573173,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,729,1573209,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,731,1573186,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,763,1572062,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,779,1572074,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,808,1572048,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,817,1573149,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,823,1573215,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,825,1572029,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,838,1571984,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,858,1573159,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,868,1573213,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,874,1572001,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,894,1572089,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,905,1573214,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,917,1573188,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,940,1571975,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,944,1573205,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+clean,technical_officials.csv,956,1571974,listed in Diving and Water Polo (possible scraping error),kept both oly:officiatesIn links
+reconcile,,,BSB,no exact Wikidata item for 'Baseball/Softball',no skos:exactMatch
+reconcile,,,EOR,no Wikidata item for this NOC,no owl:sameAs
+teams,athletes.csv,,1312235,athlete listed in two disciplines,member of both teams
+teams,athletes.csv,,1330503,athlete listed in two disciplines,member of both teams
+teams,athletes.csv,,1330510,athlete listed in two disciplines,member of both teams
+teams,athletes.csv,,1342530,athlete listed in two disciplines,member of both teams
+teams,athletes.csv,,1343289,athlete listed in two disciplines,member of both teams
+teams,athletes.csv,,1346205,athlete listed in two disciplines,member of both teams
+teams,athletes.csv,,1350550,athlete listed in two disciplines,member of both teams
+teams,athletes.csv,,1393561,athlete listed in two disciplines,member of both teams
+teams,athletes.csv,,1431563,athlete listed in two disciplines,member of both teams
+teams,athletes.csv,,1467441,athlete listed in two disciplines,member of both teams
+teams,athletes.csv,,1467919,athlete listed in two disciplines,member of both teams
+teams,athletes.csv,169,1285948,no gender,member of the Team directly (no squad)
+teams,athletes.csv,188,1304897,no gender,member of the Team directly (no squad)
+teams,athletes.csv,369,1325290,no gender,member of the Team directly (no squad)
+teams,athletes.csv,372,1327457,no gender,member of the Team directly (no squad)
+teams,athletes.csv,521,1348776,no gender,member of the Team directly (no squad)
+teams,athletes.csv,568,1285951,no gender,member of the Team directly (no squad)
+teams,athletes.csv,595,1301044,no gender,member of the Team directly (no squad)
+teams,athletes.csv,747,1312360,no gender,member of the Team directly (no squad)
+teams,athletes.csv,787,1351034,no gender,member of the Team directly (no squad)
+teams,athletes.csv,793,1365551,no gender,member of the Team directly (no squad)
+teams,athletes.csv,1239,1462914,no gender; medal in a men's event,member of the men's squad
+teams,athletes.csv,1345,1482700,no gender,member of the Team directly (no squad)
+teams,athletes.csv,1448,1294270,no gender,member of the Team directly (no squad)
+teams,athletes.csv,1598,1301899,no gender,member of the Team directly (no squad)
+teams,athletes.csv,1613,1282036,no gender,member of the Team directly (no squad)
+teams,athletes.csv,1695,1316414,no gender,member of the Team directly (no squad)
+teams,athletes.csv,1907,1449823,no gender,member of the Team directly (no squad)
+teams,athletes.csv,2024,1432427,no gender,member of the Team directly (no squad)
+teams,athletes.csv,2088,1326934,no gender,member of the Team directly (no squad)
+teams,athletes.csv,2241,1473300,no gender,member of the Team directly (no squad)
+teams,athletes.csv,2907,1300487,no gender,member of the Team directly (no squad)
+teams,athletes.csv,2935,1343137,no gender,member of the Team directly (no squad)
+teams,athletes.csv,2937,1340415,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3133,1444586,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3149,1482704,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3223,1316854,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3290,1312964,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3413,1304776,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3434,1894698,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3437,1312178,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3480,1332548,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3566,1304074,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3634,1728922,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3692,1332457,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3729,1331569,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3819,1302269,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3844,1315932,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3908,1367065,no gender; medal in a men's event,member of the men's squad
+teams,athletes.csv,3960,1329602,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3967,1328857,no gender,member of the Team directly (no squad)
+teams,athletes.csv,3991,1350630,no gender; medal in a men's event,member of the men's squad
+teams,athletes.csv,4052,1319547,no gender,member of the Team directly (no squad)
+teams,athletes.csv,4358,1319525,no gender,member of the Team directly (no squad)
+teams,athletes.csv,4376,1284848,no gender,member of the Team directly (no squad)
+teams,athletes.csv,4416,1329617,no gender,member of the Team directly (no squad)
+teams,athletes.csv,4454,1475698,no gender,member of the Team directly (no squad)
+teams,athletes.csv,4507,1315245,no gender,member of the Team directly (no squad)
+teams,athletes.csv,4553,1465786,no gender,member of the Team directly (no squad)
+teams,athletes.csv,4667,1332553,no gender,member of the Team directly (no squad)
+teams,athletes.csv,4720,1450666,no gender,member of the Team directly (no squad)
+teams,athletes.csv,4746,1332557,no gender,member of the Team directly (no squad)
+teams,athletes.csv,4761,1475703,no gender,member of the Team directly (no squad)
+teams,athletes.csv,4934,1473334,no gender,member of the Team directly (no squad)
+teams,athletes.csv,4996,1305525,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5083,1332564,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5112,1332569,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5146,1464754,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5175,1316845,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5176,1318259,no gender; medal in a men's event,member of the men's squad
+teams,athletes.csv,5192,1309654,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5298,1438120,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5310,1436007,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5450,1345474,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5468,1329657,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5473,1317879,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5476,1308686,no gender; medal in a men's event,member of the men's squad
+teams,athletes.csv,5509,1406340,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5528,1450130,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5557,1308685,no gender; medal in a men's event,member of the men's squad
+teams,athletes.csv,5562,1407906,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5725,1286052,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5740,1351056,no gender; medal in a women's event,member of the women's squad
+teams,athletes.csv,5780,1335356,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5882,1297442,no gender,member of the Team directly (no squad)
+teams,athletes.csv,5908,1464755,no gender,member of the Team directly (no squad)
+teams,athletes.csv,6064,1428016,no gender,member of the Team directly (no squad)
+teams,athletes.csv,6332,1312926,no gender,member of the Team directly (no squad)
+teams,athletes.csv,6404,1330778,no gender,member of the Team directly (no squad)
+teams,athletes.csv,6477,1391755,no gender,member of the Team directly (no squad)
+teams,athletes.csv,6534,1388930,no gender,member of the Team directly (no squad)
+teams,athletes.csv,6540,1282049,no gender,member of the Team directly (no squad)
+teams,athletes.csv,6711,1473352,no gender,member of the Team directly (no squad)
+teams,athletes.csv,6748,1325174,no gender,member of the Team directly (no squad)
+teams,athletes.csv,6812,1329621,no gender,member of the Team directly (no squad)
+teams,athletes.csv,6840,1330794,no gender,member of the Team directly (no squad)
+teams,athletes.csv,6868,1329609,no gender,member of the Team directly (no squad)
+teams,athletes.csv,7130,1410796,no gender,member of the Team directly (no squad)
+teams,athletes.csv,7140,1428179,no gender,member of the Team directly (no squad)
+teams,athletes.csv,7213,1329630,no gender,member of the Team directly (no squad)
+teams,athletes.csv,7608,1367088,no gender; medal in a men's event,member of the men's squad
+teams,athletes.csv,7634,1449450,no gender,member of the Team directly (no squad)
+teams,athletes.csv,7747,1326657,no gender,member of the Team directly (no squad)
+teams,athletes.csv,7788,1331912,no gender; medal in a women's event,member of the women's squad
+teams,athletes.csv,7893,1340624,no gender; medal in a men's event,member of the men's squad
+teams,athletes.csv,7921,1444606,no gender,member of the Team directly (no squad)
+teams,athletes.csv,8055,1316647,no gender,member of the Team directly (no squad)
+teams,athletes.csv,8111,1319529,no gender,member of the Team directly (no squad)
+teams,athletes.csv,8230,1325883,no gender,member of the Team directly (no squad)
+teams,athletes.csv,8286,1441880,no gender,member of the Team directly (no squad)
+teams,athletes.csv,8340,1381582,no gender,member of the Team directly (no squad)
+teams,athletes.csv,8497,1482689,no gender,member of the Team directly (no squad)
+teams,athletes.csv,8503,1312189,no gender,member of the Team directly (no squad)
+teams,athletes.csv,8529,1348108,no gender,member of the Team directly (no squad)
+teams,athletes.csv,8882,1343279,no gender,member of the Team directly (no squad)
+teams,athletes.csv,8933,1314986,no gender,member of the Team directly (no squad)
+teams,athletes.csv,8968,1300482,no gender,member of the Team directly (no squad)
+teams,athletes.csv,8972,1466342,no gender,member of the Team directly (no squad)
+teams,athletes.csv,9020,1467286,no gender; medal in a women's event,member of the women's squad
+teams,athletes.csv,9023,1459601,no gender,member of the Team directly (no squad)
+teams,athletes.csv,9027,1444614,no gender,member of the Team directly (no squad)
+teams,athletes.csv,9054,1355062,no gender,member of the Team directly (no squad)
+teams,athletes.csv,9152,1313412,no gender,member of the Team directly (no squad)
+teams,athletes.csv,9206,1474581,no gender,member of the Team directly (no squad)
+teams,athletes.csv,9226,1464762,no gender,member of the Team directly (no squad)
+teams,athletes.csv,9236,1341495,no gender,member of the Team directly (no squad)
+teams,athletes.csv,9409,1329605,no gender,member of the Team directly (no squad)
+teams,athletes.csv,9472,1291267,no gender,member of the Team directly (no squad)
+teams,athletes.csv,9490,1332580,no gender,member of the Team directly (no squad)
+teams,athletes.csv,9517,1308710,no gender; medal in a men's event,member of the men's squad
+teams,athletes.csv,9525,1308694,no gender; medal in a men's event,member of the men's squad
+teams,athletes.csv,9527,1308705,no gender; medal in a men's event,member of the men's squad
+teams,athletes.csv,9599,1473385,no gender,member of the Team directly (no squad)
+teams,athletes.csv,9616,1467950,no gender,member of the Team directly (no squad)
+teams,athletes.csv,9617,1467951,no gender; medal in a women's event,member of the women's squad
+teams,athletes.csv,9672,1319520,no gender,member of the Team directly (no squad)
+teams,athletes.csv,9700,1476578,no gender,member of the Team directly (no squad)
+teams,athletes.csv,9701,1353793,no gender,member of the Team directly (no squad)
+teams,athletes.csv,9803,1348978,no gender; medal in a women's event,member of the women's squad
+teams,athletes.csv,9940,1444713,no gender,member of the Team directly (no squad)
+teams,athletes.csv,10046,1318236,no gender; medal in a men's event,member of the men's squad
+teams,athletes.csv,10183,1473388,no gender,member of the Team directly (no squad)
+teams,athletes.csv,10299,1464766,no gender,member of the Team directly (no squad)
+teams,athletes.csv,10306,1334920,no gender,member of the Team directly (no squad)
+teams,athletes.csv,10308,1282057,no gender,member of the Team directly (no squad)
+teams,athletes.csv,10350,1434261,no gender,member of the Team directly (no squad)
+teams,athletes.csv,10386,1317293,no gender,member of the Team directly (no squad)
+teams,athletes.csv,10388,1285796,no gender,member of the Team directly (no squad)
+teams,athletes.csv,10390,1449893,no gender,member of the Team directly (no squad)
+teams,athletes.csv,10832,1477256,no gender,member of the Team directly (no squad)
+teams,athletes.csv,10989,1366699,no gender,member of the Team directly (no squad)
+teams,athletes.csv,10993,1350647,no gender,member of the Team directly (no squad)
+teams,athletes.csv,11005,1282054,no gender,member of the Team directly (no squad)
+teams,athletes.csv,11026,1467453,no gender,member of the Team directly (no squad)
+teams,athletes.csv,11196,1330776,no gender,member of the Team directly (no squad)
+teams,athletes.csv,11264,1352473,no gender; medal in a men's event,member of the men's squad
+teams,athletes.csv,11390,1474986,no gender,member of the Team directly (no squad)
+teams,athletes.csv,11421,1348639,no gender,member of the Team directly (no squad)
+teams,athletes.csv,11497,1483096,no gender; medal in a men's event,member of the men's squad
+teams,athletes.csv,11578,1388549,no gender,member of the Team directly (no squad)
+teams,athletes.csv,11581,1313075,no gender,member of the Team directly (no squad)
+teams,coaches.csv,,ARG-SWA,team has coaches but no athletes in the source,team created from the coach records
+teams,coaches.csv,,DOM-BKB,team has coaches but no athletes in the source,team created from the coach records
+teams,coaches.csv,,SVK-SWA,team has coaches but no athletes in the source,team created from the coach records
+teams,coaches.csv,,VEN-BKB,team has coaches but no athletes in the source,team created from the coach records

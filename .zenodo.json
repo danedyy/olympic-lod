@@ -1,0 +1,42 @@
+{
+  "title": "Olympic LOD: Tokyo 2020 Olympic Games as 5-star Linked Open Data",
+  "upload_type": "dataset",
+  "version": "1.0.0",
+  "publication_date": "2026-11-25",
+  "language": "eng",
+  "description": "<p>The Tokyo 2020 Olympics Kaggle CSV dump (3 stars at most) turned into 5-star Linked Open Data.</p><p>This record contains two snapshots, both inside the archived GitHub release:</p><ul><li><strong>the 5-star data</strong>, in <code>data/rdf/</code>: <code>tokyo2020.ttl</code> (109,679 triples, 0 SHACL violations), <code>validation-report.csv</code> (every SHACL result) and <code>issues-log.csv</code> (source problems kept and flagged);</li><li><strong>the project</strong>: the Linked Data Application Profile (vocabulary alignment, constraints matrix, 9 minted terms) in <code>ldap/</code>, the profile as SHACL shapes with test cases in <code>shacl/</code>, the minted ontology in <code>ontology/</code>, and the reproducible Python pipeline (ingest, clean, reconcile with Wikidata, map to RDF, derive, validate with pySHACL) with its tests.</li></ul><p>Vocabularies: FOAF, W3C ORG, the DBpedia ontology, SKOS, DCTERMS, DCAT and OWL, plus the EU human-sex authority table. NOCs, countries, disciplines, medal types and the Games link to Wikidata.</p>",
+  "creators": [
+    {
+      "name": "Edim, Daniel Samuel",
+      "affiliation": "Faculty of Engineering, University of Porto"
+    },
+    {
+      "name": "Imran, Ahmad",
+      "affiliation": "Faculty of Engineering, University of Porto"
+    }
+  ],
+  "keywords": [
+    "Linked Open Data",
+    "SHACL",
+    "application profile",
+    "RDF",
+    "Olympic Games",
+    "Tokyo 2020",
+    "Wikidata",
+    "FAIR"
+  ],
+  "license": "cc-by-nc-sa-4.0",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/danedyy/olympic-lod",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://www.kaggle.com/datasets/piterfm/tokyo-2020-olympics",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Licences: the data and the profile (data/, ldap/, shacl/, ontology/) are CC BY-NC-SA 4.0, inherited from the source dataset; the code (pipeline/, tests/) is MIT. See LICENSE and LICENSE-DATA.md."
+}

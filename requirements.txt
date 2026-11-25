@@ -1,0 +1,6 @@
+# Exact versions: the Turtle output is byte-stable for these (rdflib serialisation,
+# pycountry country names). Tested with Python 3.14.
+rdflib==7.6.0
+pyshacl==0.40.2
+pycountry==26.2.16
+pytest==9.2.0

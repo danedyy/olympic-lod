@@ -1,0 +1,89 @@
+# Olympic LOD ontology — the 9 terms minted for the Tokyo 2020 LDAP
+# (ldap/terms-to-mint.csv). Reuse first, mint last:
+# every other term of the profile comes from FOAF, ORG, DBpedia, SKOS, DCTERMS, DCAT and OWL.
+#
+# Domains and ranges are inferences in OWL, not checks: the checks are the SHACL shapes
+# in ../shacl/olympic-lod-shapes.ttl.
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix org:     <http://www.w3.org/ns/org#> .
+@prefix dbo:     <http://dbpedia.org/ontology/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix oly:     <https://w3id.org/olympic-lod/ontology#> .
+
+<https://w3id.org/olympic-lod/ontology> a owl:Ontology ;
+    rdfs:label "Olympic LOD ontology"@en ;
+    dcterms:title "Olympic LOD ontology"@en ;
+    dcterms:description "The terms minted for the Olympic LOD application profile, where no existing ontology term fits: medal awards, event categories and technical officials."@en ;
+    dcterms:creator "Daniel Samuel Edim", "Ahmad Imran" ;
+    dcterms:license <https://creativecommons.org/licenses/by-nc-sa/4.0/> ;
+    dcterms:issued "2026-11-25"^^xsd:date ;
+    owl:versionInfo "1.0.0" ;
+    owl:versionIRI <https://w3id.org/olympic-lod/ontology/1.0.0> ;
+    rdfs:seeAlso <https://w3id.org/olympic-lod/shapes> .
+
+oly:MedalAward a owl:Class ;
+    rdfs:label "Medal award"@en ;
+    rdfs:comment "A medal won by one person in one event of an Olympic Games."@en ;
+    rdfs:isDefinedBy <https://w3id.org/olympic-lod/ontology> .
+
+oly:awardedTo a owl:ObjectProperty ;
+    rdfs:label "awarded to"@en ;
+    rdfs:comment "The person who won the medal."@en ;
+    rdfs:domain oly:MedalAward ;
+    rdfs:range foaf:Person ;
+    rdfs:isDefinedBy <https://w3id.org/olympic-lod/ontology> .
+
+oly:inEvent a owl:ObjectProperty ;
+    rdfs:label "in event"@en ;
+    rdfs:comment "The event in which the medal was won."@en ;
+    rdfs:domain oly:MedalAward ;
+    rdfs:range dbo:SportsEvent ;
+    rdfs:isDefinedBy <https://w3id.org/olympic-lod/ontology> .
+
+oly:wonBy a owl:ObjectProperty ;
+    rdfs:label "won by"@en ;
+    rdfs:comment "The team (one nation in one discipline) that the medal counts for."@en ;
+    rdfs:domain oly:MedalAward ;
+    rdfs:range dbo:SportsTeam ;
+    rdfs:isDefinedBy <https://w3id.org/olympic-lod/ontology> .
+
+oly:medalType a owl:ObjectProperty ;
+    rdfs:label "medal type"@en ;
+    rdfs:comment "Gold, silver or bronze, as an entry of the Medal type code list."@en ;
+    rdfs:domain oly:MedalAward ;
+    rdfs:range skos:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/olympic-lod/ontology> .
+
+oly:eventCategory a owl:ObjectProperty ;
+    rdfs:label "event category"@en ;
+    rdfs:comment "Who may compete in the event: men, women, mixed or open."@en ;
+    rdfs:domain dbo:SportsEvent ;
+    rdfs:range skos:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/olympic-lod/ontology> .
+
+oly:officiatesIn a owl:ObjectProperty ;
+    rdfs:label "officiates in"@en ;
+    rdfs:comment "The discipline in which a technical official (judge, referee, umpire…) works."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:range skos:Concept ;
+    rdfs:isDefinedBy <https://w3id.org/olympic-lod/ontology> .
+
+oly:officiatesAs a owl:ObjectProperty ;
+    rdfs:label "officiates as"@en ;
+    rdfs:comment "The function of a technical official (judge, referee, umpire…), as an entry of the Function code list."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:range org:Role ;
+    rdfs:isDefinedBy <https://w3id.org/olympic-lod/ontology> .
+
+oly:coachesAthlete a owl:ObjectProperty ;
+    rdfs:label "coaches athlete"@en ;
+    rdfs:comment "A coach of a team or squad to which the athlete belongs. Derived by query from org:Membership and org:memberOf; never stated in the source."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:range foaf:Person ;
+    rdfs:isDefinedBy <https://w3id.org/olympic-lod/ontology> .

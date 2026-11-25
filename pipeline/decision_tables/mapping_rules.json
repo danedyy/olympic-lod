@@ -1,0 +1,51 @@
+{
+ "country_name_overrides": {
+  "Chinese Taipei": [
+   "TWN",
+   "manual: IOC name"
+  ],
+  "Hong Kong, China": [
+   "HKG",
+   "manual: IOC name"
+  ],
+  "ROC": [
+   "RUS",
+   "manual: NOC name used as nationality"
+  ],
+  "Republic of Korea": [
+   "KOR",
+   "manual: automatic match wrongly gave PRK"
+  ],
+  "Turkey": [
+   "TUR",
+   "manual: no automatic match"
+  ]
+ },
+ "function_merges": {
+  "Video Assistant Referee (VAR)": "Video Assistant Referee"
+ },
+ "noc_notes": {
+  "ROC": "Russian Olympic Committee: not a country",
+  "EOR": "Refugee Olympic Team: no country; name missing in source",
+  "LBN": "Name missing in source: Lebanon",
+  "DMA": "Source misspelling: Dominica"
+ },
+ "coach_event_to_gender": {
+  "Men": "men",
+  "Baseball": "men",
+  "Women": "women",
+  "Softball": "women",
+  "Duet": "women",
+  "Team": "women",
+  "": null
+ },
+ "open_disciplines_without_squads": [
+  "EQU"
+ ],
+ "medal_event_category": {
+  "M": "men",
+  "W": "women",
+  "X": "mixed",
+  "O": "open"
+ }
+}

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this dataset or software, please cite it as below."
+title: "Olympic LOD: Tokyo 2020 Olympic Games as 5-star Linked Open Data"
+type: dataset
+version: 1.0.0
+date-released: 2026-11-25
+authors:
+  - family-names: Edim
+    given-names: Daniel Samuel
+    email: up202400301@edu.fe.up.pt
+    affiliation: "Faculty of Engineering, University of Porto"
+  - family-names: Imran
+    given-names: Ahmad
+    email: up202403072@edu.fe.up.pt
+    affiliation: "Faculty of Engineering, University of Porto"
+repository-code: "https://github.com/danedyy/olympic-lod"
+url: "https://w3id.org/olympic-lod/"
+license:
+  - CC-BY-NC-SA-4.0
+  - MIT
+keywords:
+  - Linked Open Data
+  - SHACL
+  - application profile
+  - Olympic Games
+  - Wikidata

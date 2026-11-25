@@ -1,0 +1,28 @@
+{
+ "_note": "Links chosen by hand (matrix rows 23, 35, 46). fetch_wikidata.py records the English label of each item in wikidata_snapshot.json so every choice can be reviewed; null = no exact item, so no link (logged).",
+ "games": "Q181278",
+ "medal_type": {
+  "gold": "Q15243387",
+  "silver": "Q15889641",
+  "bronze": "Q15889643"
+ },
+ "discipline": {
+  "ARC": "Q108429", "ATH": "Q542", "BDM": "Q7291", "BK3": "Q210550", "BKB": "Q5372",
+  "BMF": "Q2192643", "BMX": "Q16240947", "BOX": "Q32112", "BSB": null, "CLB": "Q5133668",
+  "CRD": "Q3609", "CSL": "Q31874", "CSP": "Q1141850", "CTR": "Q221635", "DIV": "Q7735",
+  "EQU": "Q179226", "FBL": "Q2736", "FEN": "Q12100", "GAR": "Q326827", "GLF": "Q5377",
+  "GRY": "Q61465", "GTR": "Q465014", "HBL": "Q8418", "HOC": "Q1455", "JUD": "Q11420",
+  "KTE": "Q11419", "MPN": "Q32485", "MTB": "Q1031445", "OWS": "Q631004", "ROW": "Q159354",
+  "RUG": "Q270102", "SAL": "Q14085739", "SHO": "Q206989", "SKB": "Q842284", "SRF": "Q159992",
+  "SWA": "Q180692", "SWM": "Q31920", "TEN": "Q847", "TKW": "Q36389", "TRI": "Q10980",
+  "TTE": "Q3930", "VBV": "Q4543", "VVO": "Q1734", "WLF": "Q83462", "WPO": "Q7707",
+  "WRE": "Q838089"
+ },
+ "noc_overrides": {
+  "_note": "NOCs whose automatic match (a 'national Olympic committee' item, Q183288, whose own IOC code or whose country's IOC code (P984) equals ours) is missing or ambiguous.",
+  "ASA": "Q3684459", "AUS": "Q768843", "CHN": "Q56270", "DJI": "Q3684440", "EOR": null,
+  "ESP": "Q2469149", "FIJ": "Q3627241", "FRA": "Q1650165", "GBR": "Q849756", "GEQ": "Q3684453",
+  "GUM": "Q3684449", "INA": "Q4333874", "ISV": "Q3684489", "PUR": "Q2985553", "ROC": "Q783625",
+  "USA": "Q1418438"
+ }
+}
