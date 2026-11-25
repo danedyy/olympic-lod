@@ -1,7 +1,7 @@
 # Olympic LOD — Tokyo 2020 Olympic Games as 5-star Linked Open Data
 
 **Authors:** Daniel Samuel Edim (up202400301, <up202400301@edu.fe.up.pt>) · Ahmad Imran (up202403072, <up202403072@edu.fe.up.pt>) — Faculty of Engineering, University of Porto
-**Release:** 1.0.0 (25 Nov 2026) · **DOI:** _added after the Zenodo release_
+**Release:** 1.0.0 (25 Nov 2026) · **DOI:** [10.5281/zenodo.24543242](https://doi.org/10.5281/zenodo.24543242) (all versions: [10.5281/zenodo.24543241](https://doi.org/10.5281/zenodo.24543241))
 
 The Kaggle *Tokyo 2020 Olympic Summer Games* dataset is five CSV files with no identifiers and no
 links, so it is worth 3 stars at most on the 5-star Open Data scale. This project turns it into

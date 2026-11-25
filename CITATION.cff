@@ -4,6 +4,7 @@ title: "Olympic LOD: Tokyo 2020 Olympic Games as 5-star Linked Open Data"
 type: dataset
 version: 1.0.0
 date-released: 2026-11-25
+doi: 10.5281/zenodo.24543242
 authors:
   - family-names: Edim
     given-names: Daniel Samuel
