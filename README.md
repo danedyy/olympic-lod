@@ -196,13 +196,13 @@ w3id/            the w3id.org registration: redirects to GitHub Pages (see Relea
    - a **concept DOI**, which always points to the latest version.
 5. Put the DOI in this README (the line at the top) and in `CITATION.cff` (`doi:`), and commit.
    Don't create a new release just for that: it would mint a new version DOI.
-6. Register `w3id.org/olympic-lod`, so the IRIs resolve:
-   - Check that `https://danedyy.github.io/olympic-lod/ontology/oly.ttl` opens (GitHub Pages, step 1).
-   - Fork <https://github.com/perma-id/w3id.org> and copy the `w3id/olympic-lod/` folder (its `.htaccess` and
-     `README.md`) to the root of the fork.
-   - Open a pull request titled "Add olympic-lod". The redirects work once the w3id maintainers merge it.
-   - Test: `curl -sI https://w3id.org/olympic-lod/ontology` should answer `303`, with a `Location` on GitHub Pages.
-     The `ontology/1.0.0` redirect points at the `v1.0.0` tag, so it works only after step 3.
+6. Register `w3id.org/olympic-lod`, so the IRIs resolve. Done for v1.0.0:
+   [perma-id/w3id.org#7303](https://github.com/perma-id/w3id.org/pull/7303) adds `ids/olympic-lod/` with the
+   files in `w3id/olympic-lod/`.
+   - Once it is merged, test it: `curl -sI https://w3id.org/olympic-lod/ontology` should answer `303`, with a
+     `Location` on GitHub Pages.
+   - To change a redirect later, edit `w3id/olympic-lod/`, then open a new pull request to `perma-id/w3id.org`
+     with the same files in `ids/olympic-lod/`.
 
 ## Licence
 
